@@ -1,0 +1,20 @@
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #37474f;
+  input {
+    width: 40rem;
+    height: 4.4rem;
+    border-radius: 0.8rem;
+    border: var(--boder);
+    padding: 0 1.2rem;
+    margin: 0.2rem 0;
+    color: #535261;
+  }
+}
