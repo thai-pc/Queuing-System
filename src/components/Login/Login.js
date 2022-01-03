@@ -15,16 +15,22 @@ function Login() {
           <form className={styles.formMain}>
             <Input />
             <Input />
-            <a>Quên mật khẩu</a>
-            <Button primary />
+            <div className={styles.boxLink}>
+              <a href="/forget-password">Quên mật khẩu</a>
+            </div>
+            <div className={'d-flex flex-center'}>
+              <Button primary />
+            </div>
           </form>
         </div>
         <div className={styles.loginRight}>
           <div className={styles.boxImg}>
             <BgLogin />
           </div>
-          <p>Hệ Thống</p>
-          <p>Quản Lý Xếp Hàng</p>
+          <div className={styles.boxTitle}>
+            <p className={styles.system}>Hệ thống</p>
+            <p className={styles.manage}>Quản Lý Xếp Hàng</p>
+          </div>
         </div>
       </div>
     </div>

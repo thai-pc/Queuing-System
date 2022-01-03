@@ -1,3 +1,7 @@
+@mixin clt($color) {
+  color: $color;
+}
+
 .login {
   width: 144rem;
   height: 81rem;
@@ -20,6 +24,14 @@
     top: 29.3rem;
     margin: 0 auto;
     left: 9.4rem;
+    .boxLink {
+      margin-bottom: 1.9rem;
+      a {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color: var(--red);
+      }
+    }
   }
 }
 .loginRight {
@@ -33,5 +45,22 @@
     height: 614.06px;
     bottom: 8.3rem;
     left: 7.9rem;
+  }
+  .boxTitle {
+    position: absolute;
+    left: 45.4rem;
+    bottom: 30.2rem;
+    @include clt(#ff7506);
+    .system {
+      font-size: 3.4rem;
+      line-height: 5.1rem;
+      font-weight: normal;
+    }
+    .manage {
+      font-weight: 900;
+      font-size: 3.6rem;
+      line-height: 5.4rem;
+      text-transform: uppercase;
+    }
   }
 }

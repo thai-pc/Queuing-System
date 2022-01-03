@@ -11,7 +11,8 @@
   --orange: #ff9138;
   --white: #ffffff;
   --boder: 1.5px solid #d4d4d7;
-  --bglogin: #b1b1b1;
+  --bglogin: #e6e6e6;
+  --red: #e73f3f;
 }
 html {
   font-size: 62.5%;
@@ -30,10 +31,15 @@ img {
   width: 100%;
   height: 100%;
 }
+
+input,
 button {
   outline: none;
   border: none;
 }
 .d-flex {
   display: flex;
+}
+.flex-center {
+  justify-content: center;
 }
