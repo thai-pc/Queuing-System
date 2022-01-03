@@ -49,6 +49,6 @@ button {
 .m-t {
   margin-top: 1.6rem;
 }
-input:invalid[focused='true'] {
-  border: 1.5px solid var(--red);
+.border {
+  border: 1.5px solid var(--red) !important;
 }

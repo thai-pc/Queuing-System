@@ -24,6 +24,14 @@
     top: 29.3rem;
     margin: 0 auto;
     left: 9.4rem;
+    .boxEye {
+      font-size: 1.6rem;
+      position: absolute;
+      right: 1.2rem;
+      top: 12.7rem;
+      cursor: pointer;
+      z-index: 10;
+    }
     .error {
       font-size: 1.4rem;
       line-height: 2.1rem;

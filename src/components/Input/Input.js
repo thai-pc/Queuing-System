@@ -1,6 +1,6 @@
 import styles from './Input.module.scss';
 
-function Input({ label, onChange, id, ...inputProps }) {
+function Input({ label, onChange, focused, id, eye, ...inputProps }) {
   return (
     <div className={styles.formGroup}>
       <label>{label}</label>

@@ -11,7 +11,15 @@ function Login() {
     username: '',
     password: '',
   });
+  const [focused, setFocused] = useState('');
 
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handlePassword = () => {
+    if (values.password !== '') {
+      setShowPassword(!showPassword);
+    }
+  };
   const inputs = [
     {
       id: 1,
@@ -19,13 +27,15 @@ function Login() {
       type: 'text',
       placeholder: 'Tên đăng nhập',
       label: 'Tên đăng nhập *',
+      className: focused,
     },
     {
       id: 2,
       name: 'password',
-      type: 'password',
+      type: showPassword ? 'text' : 'password',
       placeholder: 'Mật khẩu',
       label: 'Mật khẩu *',
+      className: focused,
     },
   ];
   const onChange = (e) => {
@@ -52,8 +62,7 @@ function Login() {
         forget: 'd-none',
         forgetError: 'd-flex',
       });
-    } else {
-      console.log('giống');
+      setFocused('border');
     }
   };
 
@@ -73,6 +82,11 @@ function Login() {
                 onChange={onChange}
               />
             ))}
+            <span className={styles.boxEye} onClick={handlePassword}>
+              <i
+                className={showPassword ? 'fal fa-eye' : 'fal fa-eye-slash'}
+              ></i>
+            </span>
             <p className={clsx(error.error, [styles.error])}>
               <i className="fal fa-exclamation-circle"></i> Sai mật khẩu hoặc
               tên đăng nhập
