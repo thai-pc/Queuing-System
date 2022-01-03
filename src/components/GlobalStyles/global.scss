@@ -40,6 +40,15 @@ button {
 .d-flex {
   display: flex;
 }
+.d-none {
+  display: none;
+}
 .flex-center {
   justify-content: center;
+}
+.m-t {
+  margin-top: 1.6rem;
+}
+input:invalid[focused='true'] {
+  border: 1.5px solid var(--red);
 }

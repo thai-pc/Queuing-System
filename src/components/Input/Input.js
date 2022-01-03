@@ -1,10 +1,10 @@
 import styles from './Input.module.scss';
 
-function Input() {
+function Input({ label, onChange, id, ...inputProps }) {
   return (
     <div className={styles.formGroup}>
-      <label>Tên đăng nhập *</label>
-      <input />
+      <label>{label}</label>
+      <input {...inputProps} onChange={onChange} />
     </div>
   );
 }
