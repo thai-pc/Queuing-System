@@ -15,7 +15,6 @@ function ForgetPass() {
     setData(childData);
   };
 
-  console.log('test' + data);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
