@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import clsx from 'clsx';
 import styles from './Login.module.scss';
 import Input from '../../components/Input/Input';
@@ -96,7 +96,7 @@ function Login() {
               tên đăng nhập
             </p>
             <div className={clsx(error.forget, styles.boxLink)}>
-              <a href="/forget-password">Quên mật khẩu?</a>
+              <Link to="/forget-password">Quên mật khẩu?</Link>
             </div>
             <div className={'d-flex flex-center'}>
               <Button primary />
@@ -108,7 +108,7 @@ function Login() {
                 'flex-center m-t'
               )}
             >
-              <a href="/forget-password">Quên mật khẩu?</a>
+              <Link to="/forget-password">Quên mật khẩu?</Link>
             </div>
           </form>
         </div>
