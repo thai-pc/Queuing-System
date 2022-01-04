@@ -4,9 +4,17 @@
   border-radius: 8px;
   padding: 1rem 2.4rem;
   cursor: pointer;
+  filter: var(--drop-shadow);
+  font-size: 1.6rem;
 }
 
 .primary {
   background: var(--orange);
   color: var(--white);
+}
+.cancel {
+  color: var(--orange);
+  border: 1.5px solid var(--orange);
+  background: transparent;
+  margin-right: 2.4rem;
 }

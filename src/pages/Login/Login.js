@@ -99,7 +99,7 @@ function Login() {
               <Link to="/forget-password">Quên mật khẩu?</Link>
             </div>
             <div className={'d-flex flex-center'}>
-              <Button primary />
+              <Button primary text="Đăng nhập" />
             </div>
             <div
               className={clsx(
