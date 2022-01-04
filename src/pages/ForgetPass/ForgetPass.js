@@ -7,6 +7,18 @@ import styles from '../Login/Login.module.scss';
 function ForgetPass() {
   const [email, setEmail] = useState(false);
 
+  const emails = 'vodongthai68@gmail.com';
+
+  //Nhận dữ liệu từ thằng con
+  const [data, setData] = useState('');
+  let callbackFunction = (childData) => {
+    setData(childData);
+  };
+
+  console.log('test' + data);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className={styles.login}>
       <div className="d-flex">
@@ -14,8 +26,8 @@ function ForgetPass() {
           <div className={styles.boxImg}>
             <img src="../Image/logo.png" alt="logo" />
           </div>
-          <form className={styles.formMain}>
-            {email ? <Confirm /> : <Forget />}
+          <form className={styles.formMain} onSubmit={handleSubmit}>
+            {email ? <Confirm /> : <Forget parentCallback={callbackFunction} />}
           </form>
         </div>
         <div className={styles.loginRight}>

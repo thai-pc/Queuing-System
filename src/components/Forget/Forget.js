@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 import styles from './Forget.module.scss';
 
-function Forget() {
+function Forget({ parentCallback }) {
   const inputs = [
     {
       id: 1,
@@ -12,11 +12,18 @@ function Forget() {
       placeholder: 'Email',
     },
   ];
+
   const [values, setValues] = useState('');
 
   const onChange = (e) => {
     setValues(e.target.value);
+    sendData();
   };
+
+  const sendData = () => {
+    parentCallback(values);
+  };
+
   return (
     <>
       <div className={styles.boxTitle}>
