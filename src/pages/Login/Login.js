@@ -1,16 +1,16 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import styles from './Login.module.scss';
-import Logo from '../Logo/Logo';
-import BgLogin from '../Image/BgLogin';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import Input from '../../components/Input/Input';
+import Button from '../../components/Button/Button';
 
 function Login() {
   const [values, setValues] = useState({
     username: '',
     password: '',
   });
+
   const [focused, setFocused] = useState('');
 
   const [showPassword, setShowPassword] = useState(false);
@@ -20,6 +20,7 @@ function Login() {
       setShowPassword(!showPassword);
     }
   };
+
   const inputs = [
     {
       id: 1,
@@ -42,15 +43,16 @@ function Login() {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const user = {
-    username: 'vodongthai',
-    password: '12345678',
-  };
   const [error, setError] = useState({
     error: 'd-none',
     forget: '',
     forgetError: 'd-none',
   });
+  const user = {
+    username: 'vodongthai',
+    password: '12345678',
+  };
+  let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,6 +65,8 @@ function Login() {
         forgetError: 'd-flex',
       });
       setFocused('border');
+    } else {
+      navigate('/profile');
     }
   };
 
@@ -71,7 +75,7 @@ function Login() {
       <div className="d-flex">
         <div className={styles.loginLeft}>
           <div className={styles.boxImg}>
-            <Logo />
+            <img src="../Image/logo.png" alt="logo" />
           </div>
           <form className={styles.formMain} onSubmit={handleSubmit}>
             {inputs.map((input) => (
@@ -110,7 +114,7 @@ function Login() {
         </div>
         <div className={styles.loginRight}>
           <div className={styles.boxImg}>
-            <BgLogin />
+            <img src="../Image/BgLogin.jpg" alt="bg" />
           </div>
           <div className={styles.boxTitle}>
             <p className={styles.system}>Hệ thống</p>
