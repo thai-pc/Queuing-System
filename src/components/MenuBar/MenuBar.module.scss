@@ -1,0 +1,60 @@
+@mixin sizeOut {
+  width: 20rem;
+  height: 4.6rem;
+}
+@mixin sizeIn {
+  width: 17.6rem;
+  height: 4.6rem;
+}
+.boxMenu {
+  width: 20rem;
+  height: 81rem;
+  background: var(--white);
+  position: relative;
+  box-shadow: 0 4px 6px rgba(219, 219, 219, 0.5);
+  border-radius: 1.6rem 0 0 1.6rem;
+  .brand {
+    width: 8rem;
+    height: 6.4rem;
+    margin: 0 auto;
+    margin-top: 3.2rem;
+  }
+  .navbar {
+    width: 100%;
+    margin-top: 5.4rem;
+    .items {
+      @include sizeOut();
+      .link {
+        font-size: 1.6rem;
+        @include sizeIn();
+        display: block;
+        margin: 0 auto;
+        color: var(--gray);
+        padding: 12px 12px 12px 4px;
+        i:nth-child(1) {
+          margin-right: 0.8rem;
+        }
+        i:nth-child(2) {
+          margin-left: 1.3rem;
+        }
+      }
+    }
+  }
+  .box {
+    @include sizeOut();
+    position: absolute;
+    bottom: 3.2rem;
+    left: 1.2rem;
+    .logout {
+      @include sizeIn();
+      padding: 12px;
+      background: #fff2e7;
+      border-radius: 8px;
+      color: var(--orange);
+      font-size: 1.6rem;
+      i {
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}

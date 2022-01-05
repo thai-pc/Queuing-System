@@ -1,0 +1,45 @@
+.boxInfo {
+  width: 111.2rem;
+  height: 39.7rem;
+  box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
+  border-radius: 1.2rem;
+  background: var(--white);
+  margin-left: 2.4rem;
+  margin-top: 8rem;
+  .Info {
+    padding-top: 4rem;
+    padding-left: 2.4rem;
+    .boxAvatar {
+      width: 24.8rem;
+      height: 25.1rem;
+      position: relative;
+      .camera {
+        position: absolute;
+        bottom: 0;
+        right: 3.2rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        background: var(--orange);
+        border-radius: 50%;
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--white);
+        border: 2px solid var(--white);
+        i {
+          line-height: 4.5rem;
+        }
+      }
+      h3 {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        text-align: center;
+      }
+    }
+    .Left {
+      margin-left: 2.4rem;
+    }
+    .Right {
+      margin-left: 2.4rem;
+    }
+  }
+}

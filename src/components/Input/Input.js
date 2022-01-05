@@ -1,10 +1,14 @@
 import styles from './Input.module.scss';
 
-function Input({ label, onChange, focused, id, eye, ...inputProps }) {
+function Input({ label, onChange, focused, size, id, eye, ...inputProps }) {
   return (
     <div className={styles.formGroup}>
       <label>{label}</label>
-      <input {...inputProps} onChange={onChange} />
+      {size ? (
+        <input {...inputProps} readOnly className={styles.secondary} />
+      ) : (
+        <input {...inputProps} onChange={onChange} />
+      )}
     </div>
   );
 }

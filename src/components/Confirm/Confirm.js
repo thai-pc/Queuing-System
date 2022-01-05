@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import styles from '../Forget/Forget.module.scss';
@@ -43,6 +44,13 @@ function Confirm() {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+
+  let navigate = useNavigate();
+  const onLogin = (e) => {
+    e.preventDefault();
+    navigate('/');
+  };
+
   return (
     <>
       <div className={styles.boxTitle}>
@@ -63,7 +71,7 @@ function Confirm() {
         <i className={showConfirm ? 'fal fa-eye' : 'fal fa-eye-slash'}></i>
       </span>
       <div className={styles.boxButton}>
-        <Button primary text="Xác nhận" />
+        <Button primary text="Xác nhận" onClick={onLogin} />
       </div>
     </>
   );

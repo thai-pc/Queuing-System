@@ -15,6 +15,7 @@
   --red: #e73f3f;
   --black: #37474f;
   --drop-shadow: drop-shadow(0px 0px 6px #e7e9f2);
+  --gray: #7e7d88;
 }
 html {
   font-size: 62.5%;
@@ -54,4 +55,12 @@ button {
 }
 .border {
   border: 1.5px solid var(--red) !important;
+}
+.Layout {
+  width: 144rem;
+  height: 81rem;
+  margin: 0 auto;
+  position: relative;
+  background: var(--bglogin);
+  border-radius: 16px;
 }

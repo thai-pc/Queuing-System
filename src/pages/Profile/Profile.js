@@ -1,7 +1,17 @@
-import React from 'react';
+import Info from '../../components/Info/Info';
+import MenuBar from '../../components/MenuBar/MenuBar';
+import TopBar from '../../components/TopBar/TopBar';
 
 function Profile() {
-  return <div>Đây là trang profile</div>;
+  return (
+    <div className="Layout d-flex">
+      <MenuBar />
+      <div className="context">
+        <TopBar />
+        <Info />
+      </div>
+    </div>
+  );
 }
 
 export default Profile;
