@@ -48,10 +48,12 @@ function Login() {
     forget: '',
     forgetError: 'd-none',
   });
+
   const user = {
     username: 'vodongthai',
     password: '12345678',
   };
+
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {

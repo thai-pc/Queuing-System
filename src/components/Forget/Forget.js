@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import styles from './Forget.module.scss';
@@ -17,11 +18,20 @@ function Forget({ parentCallback }) {
 
   const onChange = (e) => {
     setValues(e.target.value);
-    sendData();
   };
 
   const sendData = () => {
     parentCallback(values);
+  };
+  const onClick = (e) => {
+    e.preventDefault();
+    sendData();
+  };
+  let navigate = useNavigate();
+
+  const onLogin = (e) => {
+    e.preventDefault();
+    navigate('/');
   };
 
   return (
@@ -34,8 +44,8 @@ function Forget({ parentCallback }) {
         <Input key={input.id} {...input} value={values} onChange={onChange} />
       ))}
       <div className={styles.boxButton}>
-        <Button cancel text="Hủy" />
-        <Button primary text="Tiếp tục" />
+        <Button cancel text="Hủy" onClick={onLogin} />
+        <Button primary text="Tiếp tục" onClick={onClick} />
       </div>
     </>
   );

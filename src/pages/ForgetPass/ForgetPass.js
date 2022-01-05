@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Confirm from '../../components/Confirm/Confirm';
 import Forget from '../../components/Forget/Forget';
@@ -11,13 +11,17 @@ function ForgetPass() {
 
   //Nhận dữ liệu từ thằng con
   const [data, setData] = useState('');
+
   let callbackFunction = (childData) => {
     setData(childData);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  useEffect(() => {
+    if (emails === data) {
+      setEmail(true);
+    }
+  }, [data]);
+
   return (
     <div className={styles.login}>
       <div className="d-flex">
@@ -25,7 +29,7 @@ function ForgetPass() {
           <div className={styles.boxImg}>
             <img src="../Image/logo.png" alt="logo" />
           </div>
-          <form className={styles.formMain} onSubmit={handleSubmit}>
+          <form className={styles.formMain}>
             {email ? <Confirm /> : <Forget parentCallback={callbackFunction} />}
           </form>
         </div>
