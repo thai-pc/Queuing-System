@@ -6,15 +6,18 @@ import Popup from './Popup/Popup';
 
 function TopBar() {
   const [popup, setPopup] = useState(false);
+  const [bell, setBell] = useState(false);
 
   const handlePopup = () => {
     setPopup((prev) => !prev);
+    setBell((prev) => !prev);
   };
 
   const keyPress = useCallback(
     (e) => {
       if (e.key === 'Escape' && popup) {
         setPopup(false);
+        setBell(false);
       }
     },
     [setPopup, popup]
@@ -35,7 +38,7 @@ function TopBar() {
           <div className={styles.info}>
             <button
               type="button"
-              className={styles.notify}
+              className={clsx(styles.notify, { [styles.secondary]: bell })}
               onClick={handlePopup}
             >
               <i className="fas fa-bell"></i>
