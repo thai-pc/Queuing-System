@@ -18,6 +18,9 @@
     margin: 0.2rem 0;
     color: #535261;
     font-size: 1.6rem;
+    &:focus {
+      border: 1.5px solid var(--orange);
+    }
   }
   .secondary {
     width: 38.4rem;

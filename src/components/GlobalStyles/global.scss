@@ -26,6 +26,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: var(--gray);
 }
 ul,
 li {
@@ -55,6 +56,9 @@ button {
 }
 .border {
   border: 1.5px solid var(--red) !important;
+}
+.setting {
+  position: relative;
 }
 .Layout {
   width: 144rem;

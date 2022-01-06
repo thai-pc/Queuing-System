@@ -24,18 +24,24 @@
     margin-top: 5.4rem;
     .items {
       @include sizeOut();
+      &:hover {
+        background: var(--orange);
+      }
       .link {
         font-size: 1.6rem;
         @include sizeIn();
         display: block;
         margin: 0 auto;
-        color: var(--gray);
         padding: 12px 12px 12px 4px;
+        &:hover {
+          color: var(--white);
+        }
         i:nth-child(1) {
           margin-right: 0.8rem;
         }
         i:nth-child(2) {
           margin-left: 1.3rem;
+          cursor: pointer;
         }
       }
     }
@@ -52,6 +58,7 @@
       border-radius: 8px;
       color: var(--orange);
       font-size: 1.6rem;
+      cursor: pointer;
       i {
         margin-right: 1.2rem;
       }

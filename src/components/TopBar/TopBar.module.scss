@@ -24,8 +24,15 @@
         height: 3.2rem;
         border-radius: 50%;
         background: #fff2e7;
-        color: var(--orange);
         cursor: pointer;
+        position: relative;
+        color: var(--orange);
+        &:hover {
+          background: var(--orange);
+        }
+        &:hover i {
+          color: var(--white);
+        }
       }
       .context {
         p {
