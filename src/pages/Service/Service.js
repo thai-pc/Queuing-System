@@ -2,7 +2,7 @@ import React from 'react';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import TopBar from '../../components/TopBar/TopBar';
 
-function Dashboard() {
+function Service() {
   return (
     <div className="Layout d-flex">
       <MenuBar />
@@ -13,4 +13,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Service;
