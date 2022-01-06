@@ -66,7 +66,7 @@ function MenuBar() {
             <i className="far fa-file-chart-line"></i>Báo cáo
           </a>
         </li>
-        <li className={clsx(styles.items, 'setting')}>
+        <li className={clsx(styles.items, styles.setting)}>
           <a href="/" className={styles.link} onClick={openSetting}>
             <i className="far fa-cog"></i>Cài đặt hệ thống
             <i className="far fa-ellipsis-v"></i>

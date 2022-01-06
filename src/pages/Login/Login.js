@@ -11,7 +11,7 @@ function Login() {
     password: '',
   });
 
-  const [focused, setFocused] = useState('');
+  const [focused, setFocused] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -28,7 +28,6 @@ function Login() {
       type: 'text',
       placeholder: 'Tên đăng nhập',
       label: 'Tên đăng nhập *',
-      className: focused,
     },
     {
       id: 2,
@@ -36,7 +35,6 @@ function Login() {
       type: showPassword ? 'text' : 'password',
       placeholder: 'Mật khẩu',
       label: 'Mật khẩu *',
-      className: focused,
     },
   ];
   const onChange = (e) => {
@@ -66,7 +64,7 @@ function Login() {
         forget: 'd-none',
         forgetError: 'd-flex',
       });
-      setFocused('border');
+      setFocused(true);
     } else {
       navigate('/profile');
     }
@@ -86,6 +84,7 @@ function Login() {
                 {...input}
                 value={values[input.name]}
                 onChange={onChange}
+                error={focused}
               />
             ))}
             <span className={styles.boxEye} onClick={handlePassword}>
