@@ -1,15 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import clsx from 'clsx';
-import TitleBar from './TitleBar/TitleBar';
 import styles from './TopBar.module.scss';
+import TitleBar from './TitleBar/TitleBar';
 import Popup from './Popup/Popup';
 
 function TopBar() {
   const [popup, setPopup] = useState(false);
 
   const handlePopup = () => {
-    //Xử lý
+    setPopup((prev) => !prev);
   };
+
+  const keyPress = useCallback(
+    (e) => {
+      if (e.key === 'Escape' && popup) {
+        setPopup(false);
+      }
+    },
+    [setPopup, popup]
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress);
+    return () => {
+      document.removeEventListener('keydown', keyPress);
+    };
+  }, [keyPress]);
 
   return (
     <div className={styles.boxTopbar}>
@@ -24,7 +40,7 @@ function TopBar() {
             >
               <i className="fas fa-bell"></i>
             </button>
-            <Popup />
+            <Popup popup={popup} setPopup={setPopup} />
             <div className={styles.boxAvatar}>
               <img src="../Image/avatar.png" alt="avatar" />
             </div>
