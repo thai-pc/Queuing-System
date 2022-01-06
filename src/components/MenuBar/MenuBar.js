@@ -43,32 +43,50 @@ function MenuBar() {
       <ul className={styles.navbar}>
         <li className={styles.items}>
           <a href="/" className={styles.link}>
-            <i className="fal fa-clipboard"></i>Dashboard
+            <div>
+              <i class="far fa-tachometer-slowest"></i>
+            </div>
+            Dashboard
           </a>
         </li>
         <li className={styles.items}>
           <a href="/" className={styles.link}>
-            <i className="far fa-tv"></i>Thiết bị
+            <div>
+              <i className="far fa-tv"></i>
+            </div>
+            Thiết bị
           </a>
         </li>
         <li className={styles.items}>
           <a href="/" className={styles.link}>
-            <i className="fal fa-comments"></i>Dịch vụ
+            <div>
+              <i className="fal fa-comments"></i>
+            </div>
+            Dịch vụ
           </a>
         </li>
         <li className={styles.items}>
           <a href="/" className={styles.link}>
-            <i className="far fa-layer-group"></i>Cấp số
+            <div>
+              <i className="far fa-layer-group"></i>
+            </div>
+            Cấp số
           </a>
         </li>
         <li className={styles.items}>
           <a href="/" className={styles.link}>
-            <i className="far fa-file-chart-line"></i>Báo cáo
+            <div>
+              <i className="far fa-file-chart-line"></i>
+            </div>
+            Báo cáo
           </a>
         </li>
         <li className={clsx(styles.items, styles.setting)}>
           <a href="/" className={styles.link} onClick={openSetting}>
-            <i className="far fa-cog"></i>Cài đặt hệ thống
+            <div>
+              <i className="far fa-cog"></i>
+            </div>
+            Cài đặt hệ thống
             <i className="far fa-ellipsis-v"></i>
           </a>
           <Setting setting={setting} setSetting={setSetting} />

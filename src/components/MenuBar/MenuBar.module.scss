@@ -39,6 +39,10 @@
         &:hover {
           color: var(--white);
         }
+        div {
+          width: 2rem;
+          height: 2rem;
+        }
         i:nth-child(1) {
           margin-right: 0.8rem;
         }
