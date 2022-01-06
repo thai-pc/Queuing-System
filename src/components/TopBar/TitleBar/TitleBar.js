@@ -10,9 +10,7 @@ function TitleBar({ primary, secondary, label, label1 }) {
           <span class="far fa-angle-right"></span>
           <h3 className={styles.primary}>{label}</h3>
         </>
-      ) : (
-        ''
-      )}
+      ) : null}
     </div>
   );
 }
