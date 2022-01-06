@@ -1,5 +1,6 @@
 import styles from './Input.module.scss';
 import clsx from 'clsx';
+
 function Input({ label, onChange, error, size, id, eye, ...inputProps }) {
   return (
     <div className={styles.formGroup}>

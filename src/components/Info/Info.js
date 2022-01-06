@@ -25,31 +25,36 @@ function Info() {
       label: 'Email',
       value: 'adminSS01@domain.com',
     },
-    // {
-    //   id: 4,
-    //   name: 'username',
-    //   type: 'text',
-    //   label: 'Tên đăng nhập',
-    //   value: 'lequynhhaivan01',
-    //   readonly: 'readonly',
-    // },
-    // {
-    //   id: 5,
-    //   name: 'password',
-    //   type: 'text',
-    //   label: 'Mật khẩu',
-    //   value: '311940211',
-    //   readonly: 'readonly',
-    // },
-    // {
-    //   id: 6,
-    //   name: 'email',
-    //   type: 'text',
-    //   label: 'Vai trò',
-    //   value: 'Kế toán',
-    //   readonly: 'readonly',
-    // },
+    {
+      id: 4,
+      name: 'username',
+      type: 'text',
+      label: 'Tên đăng nhập',
+      value: 'lequynhhaivan01',
+    },
+    {
+      id: 5,
+      name: 'password',
+      type: 'text',
+      label: 'Mật khẩu',
+      value: '311940211',
+    },
+    {
+      id: 6,
+      name: 'email',
+      type: 'text',
+      label: 'Vai trò',
+      value: 'Kế toán',
+    },
   ];
+  const left = [];
+  for (let index = 0; index < inputs.length - 3; index++) {
+    left.push(inputs[index]);
+  }
+  const right = [];
+  for (let index = 3; index < inputs.length; index++) {
+    right.push(inputs[index]);
+  }
 
   return (
     <div className={styles.boxInfo}>
@@ -62,12 +67,12 @@ function Info() {
           <h3>Lê Quỳnh Ái Vân</h3>
         </div>
         <div className={styles.Left}>
-          {inputs.map((input) => (
+          {left.map((input) => (
             <Input key={input.id} {...input} value={input.value} size />
           ))}
         </div>
         <div className={styles.Right}>
-          {inputs.map((input) => (
+          {right.map((input) => (
             <Input key={input.id} {...input} value={input.value} size />
           ))}
         </div>
