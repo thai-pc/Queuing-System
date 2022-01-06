@@ -22,36 +22,6 @@
   .navbar {
     width: 100%;
     margin-top: 5.4rem;
-    .setting {
-      position: relative;
-    }
-    .items {
-      @include sizeOut();
-      &:hover {
-        background: var(--orange);
-      }
-      .link {
-        font-size: 1.6rem;
-        @include sizeIn();
-        display: block;
-        margin: 0 auto;
-        padding: 12px 12px 12px 4px;
-        &:hover {
-          color: var(--white);
-        }
-        div {
-          width: 2rem;
-          height: 2rem;
-        }
-        i:nth-child(1) {
-          margin-right: 0.8rem;
-        }
-        i:nth-child(2) {
-          margin-left: 1.3rem;
-          cursor: pointer;
-        }
-      }
-    }
   }
   .box {
     @include sizeOut();
@@ -60,14 +30,18 @@
     left: 1.2rem;
     .logout {
       @include sizeIn();
+      display: flex;
+      align-items: center;
       padding: 12px;
       background: #fff2e7;
       border-radius: 8px;
       color: var(--orange);
       font-size: 1.6rem;
       cursor: pointer;
-      i {
-        margin-right: 1.2rem;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1.3rem;
       }
     }
   }

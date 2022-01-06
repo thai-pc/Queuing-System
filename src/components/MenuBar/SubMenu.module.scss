@@ -1,3 +1,34 @@
+@mixin sizeOut {
+  width: 20rem;
+  height: 4.6rem;
+}
+@mixin sizeIn {
+  width: 17.6rem;
+  height: 4.6rem;
+}
+.items {
+  position: relative;
+  @include sizeOut();
+  &:hover {
+    background: var(--orange);
+  }
+  .link {
+    font-size: 1.6rem;
+    @include sizeIn();
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.2rem 0;
+    &:hover {
+      color: var(--white);
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.8rem;
+    }
+  }
+}
 .navbar {
   position: absolute;
   left: 20rem;
