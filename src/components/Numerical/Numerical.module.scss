@@ -1,0 +1,92 @@
+.box {
+  margin-left: 2.8rem;
+  margin-top: 2rem;
+  width: 100%;
+  .item {
+    width: 18.6rem;
+    height: 12rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    margin-left: 1.3rem;
+    padding: 0.8rem 0 0.7rem 1.2rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    .top {
+      align-items: center;
+      .blue {
+        background: #e8efff;
+        svg {
+          color: var(--blue);
+        }
+      }
+      .green {
+        background: #e0f7e5;
+        svg {
+          color: var(--green);
+        }
+      }
+      .orange {
+        background: #fff2e9;
+        svg {
+          color: var(--light-orange);
+        }
+      }
+      .pink {
+        background: #fff2e9;
+        svg {
+          color: var(--pink);
+        }
+      }
+      .icon {
+        width: 4.8rem;
+        height: 4.8rem;
+        font-size: 2.4rem;
+        border-radius: 50%;
+        position: relative;
+        svg {
+          position: absolute;
+          top: 1.2rem;
+          left: 1.2rem;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+      .text {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: var(--dark-gray);
+        padding-left: 1.2rem;
+        padding-right: 4rem;
+        font-weight: 700;
+        width: calc(100% - 4.8rem);
+      }
+    }
+    .bottom {
+      margin-top: 1.2rem;
+      align-items: center;
+      .number {
+        width: 10.8rem;
+        height: 4.5rem;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        color: var(--dark-gray);
+      }
+      .percent {
+        width: 4.8rem;
+        background: rgba(255, 149, 1, 0.15);
+        border-radius: 0.7rem;
+        color: var(--orange);
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        margin-left: 1rem;
+        text-align: center;
+        svg {
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    }
+  }
+}
