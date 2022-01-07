@@ -6,7 +6,6 @@ function Numerical() {
   return (
     <div className={clsx(styles.box, 'd-flex')}>
       {numericalData.map((item, index) => {
-        console.log(index);
         return (
           <div className={styles.item} key={index}>
             <div className={clsx(styles.top, 'd-flex')}>
