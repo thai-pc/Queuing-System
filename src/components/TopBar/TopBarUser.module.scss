@@ -1,0 +1,47 @@
+.boxUser {
+  float: right;
+  .info {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    .boxAvatar {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-right: 0.8rem;
+    }
+    .notify {
+      margin-right: 2.4rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      background: #fff2e7;
+      cursor: pointer;
+      position: relative;
+      color: var(--orange);
+      &:hover {
+        background: var(--orange);
+      }
+      &:hover i {
+        color: var(--white);
+      }
+    }
+    .secondary {
+      background: var(--orange);
+      i {
+        color: var(--white);
+      }
+    }
+    .context {
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: #535261;
+      }
+    }
+  }
+}

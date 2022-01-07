@@ -2,17 +2,17 @@ import React from 'react';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
-import { service } from '../../components/TopBar/TopBarData';
+import { device } from '../../components/TopBar/TopBarData';
 
-function Service() {
+function Device() {
   return (
     <div className="Layout d-flex">
       <MenuBar />
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            {service.map((item, index) => {
-              return <SubTitle service={item} key={index} />;
+            {device.map((item, index) => {
+              return <SubTitle device={item} key={index} />;
             })}
             <TopBarUser />
           </div>
@@ -22,4 +22,4 @@ function Service() {
   );
 }
 
-export default Service;
+export default Device;

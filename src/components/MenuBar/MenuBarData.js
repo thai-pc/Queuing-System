@@ -14,22 +14,22 @@ export const MenuBarData = [
   },
   {
     title: 'Thiết bị',
-    path: '/equipment',
+    path: '/device/list',
     icon: <DesktopWindowsOutlinedIcon />,
   },
   {
     title: 'Dịch vụ',
-    path: '/service',
+    path: '/service/list',
     icon: <ForumOutlinedIcon />,
   },
   {
     title: 'Cấp số',
-    path: '/number-level',
+    path: '/number-level/list',
     icon: <LayersOutlinedIcon />,
   },
   {
     title: 'Báo cáo',
-    path: '/report',
+    path: '/report/list',
     icon: <AssessmentOutlinedIcon />,
   },
   {

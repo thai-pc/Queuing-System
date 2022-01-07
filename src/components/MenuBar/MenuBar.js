@@ -21,8 +21,6 @@ function MenuBar() {
         {MenuBarData.map((item, index) => {
           return <SubMenu item={item} key={index} />;
         })}
-
-        {/* <Setting setting={setting} setSetting={setSetting} /> */}
       </ul>
       <div className={styles.box}>
         <button type="button" className={styles.logout} onClick={onLogout}>

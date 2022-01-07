@@ -1,0 +1,26 @@
+@mixin size {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.boxTitle {
+  float: left;
+  align-items: center;
+  .title {
+    @include size();
+    font-weight: 700;
+    .link {
+      width: 100%;
+      color: var(--gray);
+    }
+    .active {
+      color: var(--orange);
+    }
+  }
+
+  svg {
+    margin: 0 1rem;
+    width: 2rem;
+    height: 2rem;
+    color: var(--gray);
+  }
+}

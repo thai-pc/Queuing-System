@@ -1,13 +1,22 @@
 import Info from '../../components/Info/Info';
 import MenuBar from '../../components/MenuBar/MenuBar';
-import TopBar from '../../components/TopBar/TopBar';
+import SubTitle from '../../components/TopBar/SubTitle';
+import TopBarUser from '../../components/TopBar/TopBarUser';
+import { proflie } from '../../components/TopBar/TopBarData';
 
 function Profile() {
   return (
     <div className="Layout d-flex">
       <MenuBar />
       <div className="context">
-        <TopBar />
+        <div className="boxTopbar">
+          <div className="container">
+            {proflie.map((item, index) => {
+              return <SubTitle profile={item} key={index} />;
+            })}
+            <TopBarUser />
+          </div>
+        </div>
         <Info />
       </div>
     </div>

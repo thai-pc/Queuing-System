@@ -62,3 +62,16 @@ button {
   background: var(--bglogin);
   border-radius: 16px;
 }
+.boxTopbar {
+  width: 124rem;
+  height: 8.8rem;
+  position: relative;
+  z-index: 100;
+}
+.container {
+  width: 100%;
+  padding: 2.9rem 6.4rem 2.9rem 2.4rem;
+}
+.context {
+  position: relative;
+}

@@ -4,10 +4,10 @@ import Login from '../pages/Login/Login';
 import Dashboard from '../pages/Dashboard/Dashboard';
 import Profile from '../pages/Profile/Profile';
 import ForgetPass from '../pages/ForgetPass/ForgetPass';
-import Equipment from '../pages/Equipment/Equiment';
 import Service from '../pages/Service/Service';
 import NumberLevel from '../pages/NumberLevel/NumberLevel';
 import Report from '../pages/Report/Report';
+import Device from '../pages/Device/Device';
 
 function Router() {
   return (
@@ -17,10 +17,11 @@ function Router() {
         <Route path="/forget-password" element={<ForgetPass />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/equipment" element={<Equipment />}></Route>
-        <Route path="/service" element={<Service />}></Route>
-        <Route path="/number-level" element={<NumberLevel />}></Route>
-        <Route path="/report" element={<Report />}></Route>
+        <Route path="/device/list" element={<Device />}></Route>
+        <Route path="/service/list" element={<Service />}></Route>
+        <Route path="/number-level/list" element={<NumberLevel />}></Route>
+        <Route path="/report/list" element={<Report />}></Route>
+        <Route path="/system/role" element={<Report />}></Route>
       </Routes>
     </BrowserRouter>
   );
