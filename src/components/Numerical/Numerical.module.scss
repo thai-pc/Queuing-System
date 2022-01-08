@@ -73,15 +73,28 @@
         line-height: 4.5rem;
         color: var(--dark-gray);
       }
+      .pink1 {
+        color: var(--pink);
+        background: #fff2e9;
+      }
+      .pink2 {
+        color: var(--pink);
+        background: #fff2e9;
+      }
+      .orange1 {
+        color: var(--orange);
+      }
+      .orange2 {
+        color: var(--orange);
+      }
       .percent {
         width: 4.8rem;
-        background: rgba(255, 149, 1, 0.15);
         border-radius: 0.7rem;
-        color: var(--orange);
         font-size: 0.8rem;
         line-height: 1.5rem;
         margin-left: 1rem;
         text-align: center;
+        background: #fff2e9;
         svg {
           width: 0.8rem;
           height: 0.8rem;

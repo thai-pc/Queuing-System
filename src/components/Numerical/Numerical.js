@@ -24,7 +24,14 @@ function Numerical() {
             </div>
             <div className={clsx(styles.bottom, 'd-flex')}>
               <div className={styles.number}>{item.number}</div>
-              <div className={styles.percent}>
+              <div
+                className={clsx(styles.percent, {
+                  [styles.pink1]: index === 1,
+                  [styles.pink2]: index === 3,
+                  [styles.orange1]: index === 0,
+                  [styles.orange2]: index === 2,
+                })}
+              >
                 {item.arrow}
                 {item.percent}
               </div>
