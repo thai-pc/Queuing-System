@@ -8,6 +8,7 @@ import Service from '../pages/Service/Service';
 import NumberLevel from '../pages/NumberLevel/NumberLevel';
 import Report from '../pages/Report/Report';
 import Device from '../pages/Device/Device';
+import Systems from '../pages/Systems/Systems';
 
 function Router() {
   return (
@@ -21,7 +22,7 @@ function Router() {
         <Route path="/service/list" element={<Service />}></Route>
         <Route path="/number-level/list" element={<NumberLevel />}></Route>
         <Route path="/report/list" element={<Report />}></Route>
-        <Route path="/system/role" element={<Report />}></Route>
+        <Route path="/systems" element={<Systems />}></Route>
       </Routes>
     </BrowserRouter>
   );

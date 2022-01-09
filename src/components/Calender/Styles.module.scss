@@ -1,0 +1,17 @@
+@mixin size {
+  width: 100%;
+  height: 100%;
+}
+.today {
+  @include size();
+  background: var(--gray);
+  color: var(--white);
+}
+.selected {
+  @include size();
+  background: var(--orange);
+  color: var(--white);
+}
+.before {
+  color: var(--gray);
+}

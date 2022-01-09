@@ -1,0 +1,28 @@
+@mixin btn {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  cursor: pointer;
+}
+.header {
+  width: 28.8rem;
+  height: 5.6rem;
+  border-bottom: 1px solid #dcddfd;
+  color: var(--orange);
+  margin: 0 auto;
+  font-size: 1.6rem;
+  .box {
+    display: flex;
+    justify-content: space-between;
+    line-height: 4rem;
+    .previous {
+      @include btn();
+    }
+    .current {
+      font-weight: bold;
+    }
+    .next {
+      @include btn();
+    }
+  }
+}

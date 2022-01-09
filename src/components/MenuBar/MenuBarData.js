@@ -37,19 +37,5 @@ export const MenuBarData = [
     path: '/systems',
     icon: <SettingsOutlinedIcon />,
     openIcon: <MoreVertOutlinedIcon />,
-    subNav: [
-      {
-        title: 'Quản lý vai trò',
-        path: '/systems/role',
-      },
-      {
-        title: 'Quản lý tài khoản',
-        path: '/systems/account',
-      },
-      {
-        title: 'Nhật ký người dùng',
-        path: '/systems/diary',
-      },
-    ],
   },
 ];
