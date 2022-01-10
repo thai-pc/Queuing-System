@@ -3,9 +3,10 @@ import styles from './Container.module.scss';
 import Body from './Body';
 import { day, week, month } from './BodyData';
 import moment from 'moment';
+import Dropdown from '../Dropdown/Dropdown';
 
 function Container() {
-  const data = [
+  const chart = [
     {
       label: 'Ngày',
     },
@@ -16,7 +17,7 @@ function Container() {
       label: 'Tháng',
     },
   ];
-  const [value, setValue] = useState(data[0].label);
+  const [value, setValue] = useState(chart[0].label);
   const [showdrop, setShowdrop] = useState(false);
   const date = moment();
 
@@ -51,23 +52,14 @@ function Container() {
         </div>
         <div className={styles.box}>
           <span>Xem thêm</span>
-          <div className={styles.dropdown} onClick={handleShow}>
-            {value}
-            {showdrop ? (
-              <ul>
-                {data.map((item, index) => {
-                  return (
-                    <li key={index} onClick={(e) => handleValue(e)}>
-                      {item.label}
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : null}
-            <div className={styles.icon}>
-              <i className="fas fa-caret-down"></i>
-            </div>
-          </div>
+          <Dropdown
+            showdrop={showdrop}
+            value={value}
+            handleShow={handleShow}
+            handleValue={handleValue}
+            chart={chart}
+            sizeDashboard
+          />
         </div>
       </div>
       {value === 'Ngày' ? (

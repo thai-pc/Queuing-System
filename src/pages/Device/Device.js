@@ -2,6 +2,7 @@ import React from 'react';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
+import ListDevice from '../../components/MainPage/ListDevice';
 import { device } from '../../components/TopBar/TopBarData';
 
 function Device() {
@@ -16,6 +17,16 @@ function Device() {
             })}
             <TopBarUser />
           </div>
+        </div>
+        <div className="box">
+          {device.map((item, index) => {
+            return (
+              <h3 key={index} className="title">
+                {item.titleSub}
+              </h3>
+            );
+          })}
+          <ListDevice />
         </div>
       </div>
     </div>
