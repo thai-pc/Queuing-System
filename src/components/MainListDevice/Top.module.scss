@@ -5,11 +5,10 @@
   color: #282739;
 }
 .top {
-  display: flex;
   justify-content: space-between;
   padding-top: 1.6rem;
+  width: 111.2rem;
   .status {
-    display: flex;
     justify-content: space-between;
     h3 {
       @include h3();

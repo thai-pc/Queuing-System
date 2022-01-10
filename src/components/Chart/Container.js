@@ -3,21 +3,12 @@ import styles from './Container.module.scss';
 import Body from './Body';
 import { day, week, month } from './BodyData';
 import moment from 'moment';
+import { chart } from '../Dropdown/DropdownData';
 import Dropdown from '../Dropdown/Dropdown';
 
 function Container() {
-  const chart = [
-    {
-      label: 'Ngày',
-    },
-    {
-      label: 'Tuần',
-    },
-    {
-      label: 'Tháng',
-    },
-  ];
   const [value, setValue] = useState(chart[0].label);
+
   const [showdrop, setShowdrop] = useState(false);
   const date = moment();
 

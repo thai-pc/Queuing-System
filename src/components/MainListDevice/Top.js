@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import Input from '../Input/Input';
 import styles from './Top.module.scss';
+import clsx from 'clsx';
+import { listDeviceActie, listDeviceConnect } from '../Dropdown/DropdownData';
 
 function Top() {
   const [value, setValue] = useState('');
 
-  const inputs = [
+  const [active, setActive] = useState(listDeviceActie[0].label);
+  const [connect, setConnect] = useState(listDeviceConnect[0].label);
+
+  const [showactive, setShowActive] = useState(false);
+  const [showaconnect, setShowConnect] = useState(false);
+
+  const search = [
     {
       name: 'search',
       type: 'text',
@@ -14,24 +22,52 @@ function Top() {
       label: 'Từ khóa',
     },
   ];
+  const handleShowActive = () => {
+    setShowActive((prev) => !prev);
+  };
+  const handleShowConnect = () => {
+    setShowConnect((prev) => !prev);
+  };
+
+  const handleActive = (e) => {
+    setActive(e.target.innerText);
+  };
+  const handleConnect = (e) => {
+    setConnect(e.target.innerText);
+  };
   const onChange = (e) => {
     setValue(e.target.value);
   };
+
   return (
-    <div className={styles.top}>
-      <div className={styles.status}>
-        <div>
+    <div className={clsx(styles.top, 'd-flex')}>
+      <div className={clsx(styles.status, 'd-flex')}>
+        <div className="mg-r-24">
           <h3>Trạng thái hoạt động</h3>
-          <Dropdown />
+          <Dropdown
+            showdrop={showactive}
+            value={active}
+            list={listDeviceActie}
+            handleShow={handleShowActive}
+            handleValue={handleActive}
+            sizeDevice
+          />
         </div>
         <div>
           <h3>Trạng thái kết nối</h3>
-          <Dropdown />
+          <Dropdown
+            showdrop={showaconnect}
+            value={connect}
+            list={listDeviceConnect}
+            handleShow={handleShowConnect}
+            handleValue={handleConnect}
+            sizeDevice
+          />
         </div>
       </div>
       <div className={styles.keyboard}>
         <form className={styles.search}>
-          {inputs.map((input, index) => (
+          {search.map((input, index) => (
             <Input
               key={index}
               {...input}
