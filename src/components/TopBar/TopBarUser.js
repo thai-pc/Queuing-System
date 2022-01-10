@@ -28,6 +28,7 @@ function TopBarUser() {
       document.removeEventListener('keydown', keyPress);
     };
   }, [keyPress]);
+
   return (
     <div className={styles.boxUser}>
       <div className={styles.info}>
