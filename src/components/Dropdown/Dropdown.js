@@ -10,26 +10,30 @@ function Dropdown({
   handleValue,
 }) {
   return (
-    <div
-      className={clsx(styles.dropdown, { [styles.chart]: sizeDashboard })}
-      onClick={handleShow}
-    >
-      {value}
-      {showdrop ? (
-        <ul>
-          {chart.map((item, index) => {
-            return (
-              <li key={index} onClick={handleValue}>
-                {item.label}
-              </li>
-            );
-          })}
-        </ul>
+    <>
+      {chart && sizeDashboard ? (
+        <div
+          className={clsx(styles.dropdown, { [styles.chart]: sizeDashboard })}
+          onClick={handleShow}
+        >
+          {value}
+          {showdrop ? (
+            <ul>
+              {chart.map((item, index) => {
+                return (
+                  <li key={index} onClick={handleValue}>
+                    {item.label}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : null}
+          <div className={styles.icon}>
+            <i className="fas fa-caret-down"></i>
+          </div>
+        </div>
       ) : null}
-      <div className={styles.icon}>
-        <i className="fas fa-caret-down"></i>
-      </div>
-    </div>
+    </>
   );
 }
 

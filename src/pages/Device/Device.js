@@ -2,7 +2,7 @@ import React from 'react';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
-import ListDevice from '../../components/MainPage/ListDevice';
+import ListDevice from '../../components/MainListDevice/ListDevice';
 import { device } from '../../components/TopBar/TopBarData';
 
 function Device() {
