@@ -41,7 +41,13 @@ function Forget({ parentCallback }) {
         <p>Vui lòng nhập email để đặt lại mật khẩu của bạn *</p>
       </div>
       {inputs.map((input) => (
-        <Input key={input.id} {...input} value={values} onChange={onChange} />
+        <Input
+          key={input.id}
+          {...input}
+          value={values}
+          fisrt
+          onChange={onChange}
+        />
       ))}
       <div className={styles.boxButton}>
         <Button cancel text="Hủy" onClick={onLogin} />

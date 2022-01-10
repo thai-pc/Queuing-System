@@ -1,6 +1,33 @@
+@mixin h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #282739;
+}
 .top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.6rem;
   .status {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      @include h3();
+    }
   }
   .keyboard {
+    .search {
+      position: relative;
+      .btn {
+        position: absolute;
+        right: 1.2rem;
+        color: var(--orange);
+        font-size: 1.6rem;
+        z-index: 7;
+        bottom: 1.2rem;
+        background: transparent;
+        cursor: pointer;
+      }
+    }
   }
 }

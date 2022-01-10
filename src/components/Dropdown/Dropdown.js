@@ -13,7 +13,7 @@ function Dropdown({
     <>
       {chart && sizeDashboard ? (
         <div
-          className={clsx(styles.dropdown, { [styles.chart]: sizeDashboard })}
+          className={clsx(styles.dropdown, styles.chart)}
           onClick={handleShow}
         >
           {value}

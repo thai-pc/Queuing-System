@@ -62,6 +62,7 @@ function Confirm() {
           {...input}
           value={values[input.name]}
           onChange={onChange}
+          fisrt
         />
       ))}
       <span className={styles.boxPass} onClick={handlePassword}>

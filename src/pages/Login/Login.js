@@ -85,6 +85,7 @@ function Login() {
                 value={values[input.name]}
                 onChange={onChange}
                 error={focused}
+                fisrt
               />
             ))}
             <span className={styles.boxEye} onClick={handlePassword}>
