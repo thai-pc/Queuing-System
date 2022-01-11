@@ -97,6 +97,9 @@
               line-height: 2.1rem;
             }
           }
+          .block{
+            display: block;
+          }
           .viewmore,
           .details,
           .update {
@@ -104,6 +107,21 @@
             color: var(--dark-blue);
             line-height: 2.1rem;
             cursor: pointer;
+          }
+        }
+        .red{
+          svg{
+            color: var(--red);
+          }
+        }
+        .green{
+          svg{
+            color: var(--green);
+          }
+        }
+        .blue{
+          svg{
+            color: var(--dark-blue);
           }
         }
       }
