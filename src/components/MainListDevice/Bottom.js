@@ -1,12 +1,12 @@
 import React from 'react';
 import AddDevice from './AddDevice';
 import styles from './Bottom.module.scss';
-import Content from './Content';
+import Table from '../Table/Table';
 
 function Bottom() {
   return (
     <div className={styles.box}>
-      <Content />
+      <Table listDevice />
       <AddDevice />
     </div>
   );
