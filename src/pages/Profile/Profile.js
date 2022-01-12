@@ -2,7 +2,6 @@ import Info from '../../components/Info/Info';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
-import { proflie } from '../../components/TopBar/TopBarData';
 
 function Profile() {
   return (
@@ -11,9 +10,7 @@ function Profile() {
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            {proflie.map((item, index) => {
-              return <SubTitle profile={item} key={index} />;
-            })}
+            <SubTitle text="Thông tin cá nhân" profile path="/profile" />
             <TopBarUser />
           </div>
         </div>

@@ -1,76 +1,38 @@
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import styles from './SubTitle..module.scss';
+import { device } from './TopBarData';
 
-function SubTitle({ profile, dashboard, device, service }) {
+function SubTitle({ text, path, dashboard, profile, listDevice }) {
   return (
-    <ul className={clsx(styles.boxTitle, 'd-flex')}>
-      {profile ? (
-        <li className={styles.title}>
-          <Link to={profile.path} className={(styles.link, styles.active)}>
-            {profile.title}
-          </Link>
-        </li>
-      ) : null}
-      {dashboard ? (
-        <li className={styles.title}>
-          <Link
-            to={dashboard.path}
-            className={
-              window.location.pathname === dashboard.path
-                ? clsx(styles.link, styles.active)
-                : styles.link
-            }
-          >
-            {dashboard.title}
-          </Link>
-        </li>
-      ) : null}
-      {device ? (
-        <>
+    <>
+      {profile || dashboard ? (
+        <ul className={clsx(styles.boxTitle, 'd-flex')}>
           <li className={styles.title}>
-            <Link to={device.path} className={styles.link}>
-              {device.title}
+            <Link to={path} className={(styles.link, styles.active)}>
+              {text}
             </Link>
           </li>
-          {device.icon}
-          <li className={styles.title}>
-            <Link
-              to={device.path}
-              className={
-                window.location.pathname === device.path
-                  ? clsx(styles.link, styles.active)
-                  : styles.link
-              }
-            >
-              {device.titleSub}
-            </Link>
-          </li>
-        </>
+        </ul>
       ) : null}
-      {service ? (
-        <>
-          <li className={styles.title}>
-            <Link to={service.path} className={styles.link}>
-              {service.title}
-            </Link>
-          </li>
-          {service.icon}
-          <li className={styles.title}>
-            <Link
-              to={service.path}
-              className={
-                window.location.pathname === service.path
-                  ? clsx(styles.link, styles.active)
-                  : styles.link
-              }
-            >
-              {service.titleSub}
-            </Link>
-          </li>
-        </>
-      ) : null}
-    </ul>
+      {listDevice
+        ? device.map((item, index) => {
+            return (
+              <ul key={index} className={clsx(styles.boxTitle, 'd-flex')}>
+                <li className={styles.title}>
+                  <span className={styles.link}>{item.title}</span>
+                </li>
+                {item.icon}
+                <li className={styles.title}>
+                  <Link to={item.path} className={(styles.link, styles.active)}>
+                    {item.titleSub}
+                  </Link>
+                </li>
+              </ul>
+            );
+          })
+        : null}
+    </>
   );
 }
 

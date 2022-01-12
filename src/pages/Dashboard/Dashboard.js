@@ -1,12 +1,12 @@
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
-import { dashboard } from '../../components/TopBar/TopBarData';
 import Numerical from '../../components/Numerical/Numerical';
 import styles from './Dashboard.module.scss';
 import Overview from '../../components/Overview/Overview';
 import Calender from '../../components/Calender/Calender';
 import Chart from '../../components/Chart/Chart';
+
 function Dashboard() {
   return (
     <div className="Layout d-flex">
@@ -14,9 +14,7 @@ function Dashboard() {
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            {dashboard.map((item, index) => {
-              return <SubTitle dashboard={item} key={index} />;
-            })}
+            <SubTitle text="Dashboard" dashboard path="/dashboard" />
             <TopBarUser />
           </div>
         </div>

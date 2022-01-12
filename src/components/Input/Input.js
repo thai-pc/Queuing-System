@@ -4,12 +4,12 @@ import clsx from 'clsx';
 function Input({
   label,
   onChange,
+  addDevice,
   error,
   size,
   device,
-  id,
   fisrt,
-  eye,
+  icon,
   ...inputProps
 }) {
   return (
@@ -30,9 +30,17 @@ function Input({
           <input {...inputProps} readOnly className={styles.secondary} />
         </div>
       ) : null}
-      {device ? (
-        <div className={clsx(styles.formGroup, styles.third)}>
-          <label>{label}</label>
+      {device || addDevice ? (
+        <div
+          className={clsx(styles.formGroup, {
+            [styles.third]: device,
+            [styles.addDevice]: addDevice,
+          })}
+        >
+          <label>
+            {label}
+            {icon}
+          </label>
           <input {...inputProps} onChange={onChange} />
         </div>
       ) : null}

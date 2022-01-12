@@ -33,3 +33,12 @@ export const listDeviceConnect = [
     label: 'Mất kết nối',
   },
 ];
+
+export const addDeviceType = [
+  {
+    label: 'Kiosk',
+  },
+  {
+    label: 'Display counter',
+  },
+];

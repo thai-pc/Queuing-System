@@ -9,6 +9,7 @@ import NumberLevel from '../pages/NumberLevel/NumberLevel';
 import Report from '../pages/Report/Report';
 import Device from '../pages/Device/Device';
 import Systems from '../pages/Systems/Systems';
+import AddDevice from '../pages/Device/AddDevice';
 
 function Router() {
   return (
