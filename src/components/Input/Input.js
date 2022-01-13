@@ -10,6 +10,7 @@ function Input({
   device,
   fisrt,
   icon,
+  serviceAdd,
   ...inputProps
 }) {
   return (
@@ -30,11 +31,12 @@ function Input({
           <input {...inputProps} readOnly className={styles.secondary} />
         </div>
       ) : null}
-      {device || addDevice ? (
+      {device || addDevice || serviceAdd ? (
         <div
           className={clsx(styles.formGroup, {
             [styles.third]: device,
             [styles.addDevice]: addDevice,
+            [styles.serviceAdd]: serviceAdd,
           })}
         >
           <label>

@@ -4,8 +4,8 @@ export const device = [
   {
     title: 'Thiết bị',
     path: '/device/list',
-    icon: <ChevronRightIcon />,
     titleSub: 'Danh sách thiết bị',
+    titleSub1: 'Thêm thiết bị',
   },
 ];
 

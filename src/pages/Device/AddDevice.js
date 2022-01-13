@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import styles from './AddDevice.module.scss';
 import Input from '../../components/Input/Input';
 import Dropdown from '../../components/Dropdown/Dropdown';
+import Button from '../../components/Button/Button';
 import { addDeviceType } from '../../components/Dropdown/DropdownData';
-import { addDevice } from '../../components/Input/InputData';
+import {
+  addDevice,
+  addDeviceRight,
+  addDeviceBottom,
+} from '../../components/Input/InputData';
 
 function AddDevice() {
   const [typeDevice, setTypeDevice] = useState('Chọn loại thiết bị');
@@ -29,7 +34,7 @@ function AddDevice() {
           </div>
           <div className={styles.right}>
             <label>
-              Loại thiết bị<span> *</span>
+              Loại thiết bị:<span> *</span>
             </label>
             <Dropdown
               showdrop={showType}
@@ -39,13 +44,22 @@ function AddDevice() {
               handleValue={handleType}
               addDevice
             />
-            {addDevice.map((input) => (
-              <Input key={input.id} {...input} addDevice />
+            {addDeviceRight.map((input) => (
+              <Input key={input.name} {...input} addDevice />
             ))}
           </div>
         </div>
+        {addDeviceBottom.map((input) => (
+          <Input key={input.name} {...input} serviceAdd />
+        ))}
+        <p className={styles.note}>
+          <span>*</span> Là trường thông tin bắt buộc
+        </p>
       </div>
-      <div className={styles.boxButton}></div>
+      <div className={styles.boxButton}>
+        <Button cancel text="Hủy bỏ" sizeDevice />
+        <Button primary text="Thêm thiết bị" sizeDevice />
+      </div>
     </div>
   );
 }

@@ -1,3 +1,11 @@
+.note{
+    font-size: 1.4rem;
+    font-weight: 2.1rem;
+    margin-top: 1.8rem;
+    span{
+        color: var(--red);
+    }
+}
 .addDevice{
     width: 115.2rem;
     margin-top: 1.6rem;
@@ -34,5 +42,6 @@
     .boxButton{
         display: flex;
         justify-content: center;
+        padding-top: 2.4rem;
     }
 }

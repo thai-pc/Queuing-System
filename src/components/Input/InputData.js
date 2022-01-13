@@ -24,3 +24,29 @@ export const addDevice = [
     icon: <span> *</span>,
   },
 ];
+
+export const addDeviceRight = [
+  {
+    name: 'username',
+    type: 'text',
+    placeholder: 'Nhập tài khoản',
+    label: 'Tên đăng nhập:',
+    icon: <span> *</span>,
+  },
+  {
+    name: 'password',
+    type: 'password',
+    placeholder: 'Nhập mật khẩu',
+    label: 'Mật khẩu:',
+    icon: <span> *</span>,
+  },
+];
+export const addDeviceBottom = [
+  {
+    name: 'username',
+    type: 'text',
+    placeholder: 'Nhập dịch vụ sử dụng',
+    label: 'Dịch vụ sử dụng:',
+    icon: <span> *</span>,
+  },
+];

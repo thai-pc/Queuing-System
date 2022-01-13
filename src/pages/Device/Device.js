@@ -18,7 +18,7 @@ function Device() {
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            <SubTitle listDevice />
+            {addDevice ? <SubTitle addDevice /> : <SubTitle listDevice />}
             <TopBarUser />
           </div>
         </div>

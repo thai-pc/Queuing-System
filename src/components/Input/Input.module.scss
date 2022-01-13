@@ -1,3 +1,8 @@
+@mixin sizeInput {
+    padding: 10px 12px;
+    margin-top: .8rem;
+    height: 4.4rem;
+}
 .fisrt {
   margin-bottom: 1.2rem;
   font-size: 1.8rem;
@@ -42,9 +47,21 @@
   }
   input{
     width: 54rem;
-    height: 4.4rem;
-    padding: 10px 12px;
-    margin-top: .8rem;
+    @include sizeInput();
+  }
+}
+.serviceAdd{
+  width: 100%;
+  label{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    span{
+      color: var(--red);
+    }
+  }
+  input{
+    width: 100%;
+    @include sizeInput();
   }
 }
 .formGroup {

@@ -1,8 +1,3 @@
-li {
-  width: 100%;
-  height: 4.4rem;
-  line-height: 4.4rem;
-}
 .chart {
   width: 10.6rem;
   height: 100%;
@@ -11,6 +6,11 @@ li {
     width: 10.6rem;
     height: 15.2rem;
     top: 4.4rem;
+    li {
+      width: 100%;
+      height: 4.4rem;
+      line-height: 4.4rem;
+    }
   }
 }
 .device {
@@ -21,6 +21,11 @@ li {
     width: 30rem;
     height: 15.2rem;
     top: 4.3rem;
+    li {
+      width: 100%;
+      height: 4.4rem;
+      line-height: 4.4rem;
+    }
   }
 }
 .addDevice{
@@ -32,6 +37,11 @@ li {
   ul{
     width: 54rem;
     top: 4.4rem;
+    li {
+      width: 100%;
+      height: 4.4rem;
+      line-height: 4.4rem;
+    }
   }
 }
 //Màu border khi click

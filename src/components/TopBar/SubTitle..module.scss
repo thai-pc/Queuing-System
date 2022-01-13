@@ -1,26 +1,19 @@
-@mixin size {
-  font-size: 2rem;
-  line-height: 3rem;
-}
-.boxTitle {
+.breadcrumbs{
+  height: 4rem;
   float: left;
-  align-items: center;
-  .title {
-    @include size();
+  padding: 1rem 0;
+  .breadcrumbs__item{
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--dark-gray);
     font-weight: 700;
-    .link {
-      width: 100%;
-      color: var(--gray);
+    &:not(:last-of-type)::after{
+      content: '>';
+      margin: 0 1.5rem;
     }
-    .active {
+    .active{
       color: var(--orange);
     }
-  }
-
-  svg {
-    margin: 0 1rem;
-    width: 2rem;
-    height: 2rem;
-    color: var(--gray);
   }
 }
