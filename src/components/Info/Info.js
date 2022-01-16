@@ -60,7 +60,7 @@ function Info() {
     <div className={styles.boxInfo}>
       <div className={clsx(styles.Info, 'd-flex')}>
         <div className={styles.boxAvatar}>
-          <img src="../Image/avatar.png" alt="avatar" />
+          <img src="../../avatar.png" alt="avatar" />
           <span className={styles.camera}>
             <i className="far fa-camera"></i>
           </span>

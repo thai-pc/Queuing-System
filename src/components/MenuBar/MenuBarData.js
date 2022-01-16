@@ -16,6 +16,8 @@ export const MenuBarData = [
     title: 'Thiết bị',
     path: '/device/list',
     icon: <DesktopWindowsOutlinedIcon />,
+    pathAdd: '/device/list/add',
+    pathUpdate: '/device/list/update',
   },
   {
     title: 'Dịch vụ',

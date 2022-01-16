@@ -15,7 +15,7 @@ function MenuBar() {
   return (
     <div className={styles.boxMenu}>
       <div className={styles.brand}>
-        <img src="../Image/logo_dark.jpg" alt="logo" />
+        <img src="../../logo.svg" alt="logo" />
       </div>
       <ul className={styles.navbar}>
         {MenuBarData.map((item, index) => {

@@ -10,6 +10,7 @@ import Report from '../pages/Report/Report';
 import Device from '../pages/Device/Device';
 import Systems from '../pages/Systems/Systems';
 import AddDevice from '../pages/Device/AddDevice';
+import UpdateDevice from '../pages/Device/UpdateDevice';
 
 function Router() {
   return (
@@ -20,6 +21,8 @@ function Router() {
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/device/list" element={<Device />}></Route>
+        <Route path="/device/list/add" element={<AddDevice />}></Route>
+        <Route path="/device/list/update" element={<UpdateDevice />}></Route>
         <Route path="/service/list" element={<Service />}></Route>
         <Route path="/number-level/list" element={<NumberLevel />}></Route>
         <Route path="/report/list" element={<Report />}></Route>

@@ -1,9 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './Table.module.scss';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { ReadMore } from './ReadMore';
 import clsx from 'clsx';
 
 function Items({ currentItem }) {
+  let navigate = useNavigate();
+  const handeUpdate = (e) => {
+    e.preventDefault();
+    navigate('/device/list/update');
+  };
   return (
     <>
       {currentItem.map((item) => {
@@ -39,7 +45,9 @@ function Items({ currentItem }) {
               <span className={styles.details}>Chi tiết</span>
             </div>
             <div className={styles.col}>
-              <span className={styles.update}>Cập nhật</span>
+              <span className={styles.update} onClick={handeUpdate}>
+                Cập nhật
+              </span>
             </div>
           </div>
         );

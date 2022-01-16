@@ -41,7 +41,7 @@ function TopBarUser() {
         </button>
         <Popup popup={popup} setPopup={setPopup} />
         <div className={styles.boxAvatar}>
-          <img src="../Image/avatar.png" alt="avatar" />
+          <img src="../../avatar.png" alt="avatar" />
         </div>
         <div className={styles.context}>
           <p>Xin chào</p>
