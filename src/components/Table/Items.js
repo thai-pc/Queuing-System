@@ -6,6 +6,10 @@ import clsx from 'clsx';
 
 function Items({ currentItem }) {
   let navigate = useNavigate();
+  const handeDetail = (e) => {
+    e.preventDefault();
+    navigate('/device/list/detail');
+  };
   const handeUpdate = (e) => {
     e.preventDefault();
     navigate('/device/list/update');
@@ -42,7 +46,9 @@ function Items({ currentItem }) {
               <ReadMore>{item.service}</ReadMore>
             </div>
             <div className={styles.col}>
-              <span className={styles.details}>Chi tiết</span>
+              <span className={styles.details} onClick={handeDetail}>
+                Chi tiết
+              </span>
             </div>
             <div className={styles.col}>
               <span className={styles.update} onClick={handeUpdate}>

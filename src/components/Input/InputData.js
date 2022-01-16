@@ -50,3 +50,38 @@ export const addDeviceBottom = [
     icon: <span> *</span>,
   },
 ];
+
+export const detailDeviceLeft = [
+  {
+    title: 'Mã thiết bị:',
+    text: 'KIO_01',
+  },
+  {
+    title: 'Tên thiết bị:',
+    text: 'Kiosk',
+  },
+  {
+    title: 'Địa chỉ IP:',
+    text: '128.172.308',
+  },
+];
+export const detailDeviceRight = [
+  {
+    title: 'Loại thiết bị:',
+    text: 'Kiosk',
+  },
+  {
+    title: 'Tên đăng nhập:',
+    text: 'Linhkyo011',
+  },
+  {
+    title: 'Mật khẩu:',
+    text: 'CMS',
+  },
+];
+export const detailDeviceBottom = [
+  {
+    title: 'Dịch vụ sử dụng:',
+    text: 'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
+  },
+];

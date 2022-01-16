@@ -2,6 +2,7 @@ import Info from '../../components/Info/Info';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
+import { profile } from '../../components/TopBar/TopBarData';
 
 function Profile() {
   return (
@@ -10,7 +11,7 @@ function Profile() {
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            <SubTitle text="Thông tin cá nhân" profile path="/profile" />
+            <SubTitle list={profile} />
             <TopBarUser />
           </div>
         </div>

@@ -1,16 +1,16 @@
 import { useNavigate } from 'react-router-dom';
+import MainDetail from '../../components/MainListDevice/MainDetail';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
-import ListDevice from '../../components/MainListDevice/ListDevice';
 import ButtonDevice from '../../components/ButtonDevice/ButtonDevice';
-import { listDevice } from '../../components/TopBar/TopBarData';
+import { detailDevice } from '../../components/TopBar/TopBarData';
 
-function Device() {
+function DetailDevice() {
   let navigate = useNavigate();
-  const handleAdd = (e) => {
+  const handleUpdate = (e) => {
     e.preventDefault();
-    navigate('/device/list/add');
+    navigate('/device/list/update');
   };
   return (
     <div className="Layout d-flex">
@@ -18,18 +18,18 @@ function Device() {
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            <SubTitle list={listDevice} />
+            <SubTitle list={detailDevice} />
             <TopBarUser />
           </div>
         </div>
         <div className="box">
-          <h3 className="title">Danh sách thiết bị</h3>
-          <ListDevice />
+          <h3 className="title">Quản lý thiết bị</h3>
+          <MainDetail />
           <ButtonDevice
-            type="Thêm thiết bị"
-            icon="fas fa-plus-square"
-            handleLink={handleAdd}
-            device
+            type="Cập nhật thiết bị"
+            icon="fas fa-pen-square"
+            handleLink={handleUpdate}
+            detail
           />
         </div>
       </div>
@@ -37,4 +37,4 @@ function Device() {
   );
 }
 
-export default Device;
+export default DetailDevice;

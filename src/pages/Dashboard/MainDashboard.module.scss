@@ -1,0 +1,32 @@
+@mixin h3 {
+    color: var(--dark-orange);
+    line-height: 3.6rem;
+    font-size: 2.4rem;
+    margin-left: 2.4rem;
+  }
+  .box {
+    display: flex;
+    .boxLeft {
+      padding-top: 1.6rem;
+      width: calc(100% - 40.1rem);
+      h3 {
+        @include h3();
+      }
+    }
+    .boxRight {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--white);
+      padding-top: 10.4rem;
+      width: 40.1rem;
+      height: 81rem;
+      z-index: 10;
+      box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
+      border-radius: 8px 0px 0px 8px;
+      h3 {
+        @include h3();
+      }
+    }
+  }
+  

@@ -7,7 +7,8 @@ function SubMenu({ item }) {
   const active =
     pathName === item.path ||
     pathName === item.pathUpdate ||
-    pathName === item.pathAdd
+    pathName === item.pathAdd ||
+    pathName === item.pathDetail
       ? clsx(styles.items, styles.active)
       : styles.items;
 
