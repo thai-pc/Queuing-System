@@ -85,3 +85,78 @@ export const detailDeviceBottom = [
     text: 'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
   },
 ];
+
+export const updateDeviceLeft = [
+  {
+    name: 'code',
+    type: 'text',
+    value: 'KIO_01',
+    label: 'Mã thiết bị:',
+    icon: <span> *</span>,
+  },
+  {
+    name: 'name',
+    type: 'text',
+    value: 'Kiosk',
+    label: 'Tên thiết bị:',
+    icon: <span> *</span>,
+  },
+  {
+    name: 'address',
+    type: 'text',
+    value: '128.172.308',
+    label: 'Địa chỉ IP:',
+    icon: <span> *</span>,
+  },
+];
+
+export const updateDeviceRight = [
+  {
+    name: 'username',
+    type: 'text',
+    value: 'Linhkyo011',
+    label: 'Tên đăng nhập:',
+    icon: <span> *</span>,
+  },
+  {
+    name: 'password',
+    type: 'text',
+    value: 'CMS',
+    label: 'Mật khẩu:',
+    icon: <span> *</span>,
+  },
+];
+
+export const updateDeviceBottom = [
+  {
+    name: 'service',
+    label: 'Dịch vụ sử dụng:',
+    icon: <span> *</span>,
+    subValue: [
+      {
+        text: 'Khám tim mạch',
+        icon: <i className="fas fa-times"></i>,
+      },
+      {
+        text: 'Khám sản phụ khoa',
+        icon: <i className="fas fa-times"></i>,
+      },
+      {
+        text: 'Khám răng hàm mặt',
+        icon: <i className="fas fa-times"></i>,
+      },
+      {
+        text: 'Khám tai mũi họng',
+        icon: <i className="fas fa-times"></i>,
+      },
+      {
+        text: 'Khám hô hấp',
+        icon: <i className="fas fa-times"></i>,
+      },
+      {
+        text: 'Khám tổng quát',
+        icon: <i className="fas fa-times"></i>,
+      },
+    ],
+  },
+];
