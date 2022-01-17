@@ -43,6 +43,41 @@
       padding-left: 1.7rem;
     }
   }
+  .body {
+    .col:nth-child(6) {
+      line-height: 0;
+      p {
+        line-height: 2.1rem;
+      }
+      span {
+        line-height: 2.1rem;
+      }
+    }
+  }
+}
+.listService {
+  .col {
+    padding-left: 1.7rem;
+    &:nth-child(1) {
+      width: 15rem;
+      padding-left: 1.6rem;
+    }
+    &:nth-child(2) {
+      width: 22.4rem;
+    }
+    &:nth-child(3) {
+      width: 23rem;
+    }
+    &:nth-child(4) {
+      width: 25.3rem;
+    }
+    &:nth-child(5) {
+      width: 12.5rem;
+    }
+    &:nth-child(6) {
+      width: 12.5rem;
+    }
+  }
 }
 .content {
   width: 111.2rem;
@@ -88,16 +123,7 @@
           &:not(:last-child) {
             border-right: 1.5px solid #ffe3cb;
           }
-          &:nth-child(6) {
-            line-height: 0;
-            p {
-              line-height: 2.1rem;
-            }
-            span {
-              line-height: 2.1rem;
-            }
-          }
-          .block{
+          .block {
             display: block;
           }
           .viewmore,
@@ -109,18 +135,18 @@
             cursor: pointer;
           }
         }
-        .red{
-          svg{
+        .red {
+          svg {
             color: var(--red);
           }
         }
-        .green{
-          svg{
+        .green {
+          svg {
             color: var(--green);
           }
         }
-        .blue{
-          svg{
+        .blue {
+          svg {
             color: var(--dark-blue);
           }
         }
@@ -128,35 +154,35 @@
     }
   }
   //Pagination
-  .page{
+  .page {
     width: 100%;
     margin-top: 2.4rem;
-   .pagination{
+    .pagination {
       display: flex;
       float: right;
-      .disabled{
+      .disabled {
         pointer-events: none;
-    }
-       .pageItem{
+      }
+      .pageItem {
         width: 3.2rem;
         height: 3.2rem;
         text-align: center;
         cursor: pointer;
-        .pageLink{
-            line-height: 3.2rem;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #A9A9B0;
+        .pageLink {
+          line-height: 3.2rem;
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #a9a9b0;
         }
-       }
-       .active{
+      }
+      .active {
         background: var(--orange);
         border-radius: 4px;
-        .activeLink{
-            font-weight: 700;
-            color: var(--white);
+        .activeLink {
+          font-weight: 700;
+          color: var(--white);
         }
+      }
     }
-   }
-}
+  }
 }

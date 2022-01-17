@@ -68,6 +68,17 @@ export const updateDevice = [
   },
 ];
 
+export const listService = [
+  {
+    title: 'Dịch vụ',
+    path: '',
+  },
+  {
+    title: 'Danh sách dịch vụ',
+    path: '/service/list',
+  },
+];
+
 export const number = [
   {
     title: 'Cấp số',

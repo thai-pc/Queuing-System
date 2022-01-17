@@ -3,8 +3,9 @@ import styles from './Table.module.scss';
 import ReactPaginate from 'react-paginate';
 import clsx from 'clsx';
 import Items from './Items';
+import Title from './Title';
 
-function Table({ listDevice, title }) {
+function Table({ link, listDevice, listService }) {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const limit = 9;
@@ -22,15 +23,14 @@ function Table({ listDevice, title }) {
   const indexOfFisrtItem = indexOfLastItem - limit;
 
   const currentItem = data.slice(indexOfFisrtItem, indexOfLastItem);
-
   //Fecth api
-  const api = `https://jsonblob.com/api/jsonBlob/930461141252194304`;
+  const api = link;
 
   useEffect(() => {
     fetch(api)
       .then((response) => response.json())
-      .then((json) => (listDevice ? setData(json) : null));
-  }, [listDevice, api]);
+      .then((json) => setData(json));
+  }, [api]);
 
   //Tăng lên 1 do mảng bắt đầu từ 0
   const handlePageClick = (e) => {
@@ -44,28 +44,22 @@ function Table({ listDevice, title }) {
         <div
           className={clsx(styles.container, {
             [styles.listDevice]: listDevice,
+            [styles.listService]: listService,
           })}
         >
           <div className={styles.title}>
-            {title
-              ? title.map((item, index) => {
-                  return (
-                    <div key={index} className={styles.rows}>
-                      <div className={styles.col}>{item.code}</div>
-                      <div className={styles.col}>{item.name}</div>
-                      <div className={styles.col}>{item.address}</div>
-                      <div className={styles.col}>{item.active}</div>
-                      <div className={styles.col}>{item.connect}</div>
-                      <div className={styles.col}>{item.service}</div>
-                      <div className={styles.col}></div>
-                      <div className={styles.col}></div>
-                    </div>
-                  );
-                })
-              : null}
+            {listDevice ? (
+              <Title titleListDevice />
+            ) : listService ? (
+              <Title titleListService />
+            ) : null}
           </div>
           <div className={styles.body}>
-            <Items currentItem={currentItem} />
+            {listDevice ? (
+              <Items currentItemDevice={currentItem} />
+            ) : listService ? (
+              <Items currentItemService={currentItem} />
+            ) : null}
           </div>
         </div>
         <div className={styles.page}>

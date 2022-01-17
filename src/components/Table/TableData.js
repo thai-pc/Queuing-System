@@ -8,3 +8,11 @@ export const device = [
     service: 'Dịch vụ sử dụng',
   },
 ];
+export const service = [
+  {
+    code: 'Mã dịch vụ',
+    name: 'Tên dịch vụ ',
+    description: 'Mô tả',
+    active: 'Trạng thái hoạt động',
+  },
+];

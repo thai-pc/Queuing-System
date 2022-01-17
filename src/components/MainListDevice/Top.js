@@ -4,8 +4,9 @@ import Input from '../Input/Input';
 import styles from './Top.module.scss';
 import clsx from 'clsx';
 import { listDeviceActie, listDeviceConnect } from '../Dropdown/DropdownData';
+import DateTimePicker from '../DateTimePicker/DateTimePicker';
 
-function Top() {
+function Top({ listDevice, listService }) {
   const [value, setValue] = useState('');
 
   const [active, setActive] = useState(listDeviceActie[0].label);
@@ -53,17 +54,20 @@ function Top() {
             sizeDevice
           />
         </div>
-        <div>
-          <h3>Trạng thái kết nối</h3>
-          <Dropdown
-            showdrop={showaconnect}
-            value={connect}
-            list={listDeviceConnect}
-            handleShow={handleShowConnect}
-            handleValue={handleConnect}
-            sizeDevice
-          />
-        </div>
+        {listDevice ? (
+          <div>
+            <h3>Trạng thái kết nối</h3>
+            <Dropdown
+              showdrop={showaconnect}
+              value={connect}
+              list={listDeviceConnect}
+              handleShow={handleShowConnect}
+              handleValue={handleConnect}
+              sizeDevice
+            />
+          </div>
+        ) : null}
+        {listService ? <DateTimePicker /> : null}
       </div>
       <div className={styles.keyboard}>
         <form className={styles.search}>

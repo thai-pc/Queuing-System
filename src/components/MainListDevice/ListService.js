@@ -1,19 +1,19 @@
-import Top from './Top';
 import Table from '../Table/Table';
 import styles from './listDevice.module.scss';
+import Top from './Top';
 
-function ListDevice() {
+function ListService() {
   return (
     <div>
-      <Top listDevice />
+      <Top listService />
       <div className={styles.box}>
         <Table
-          link="https://jsonblob.com/api/jsonBlob/930461141252194304"
-          listDevice
+          link="https://jsonblob.com/api/jsonBlob/932648813865484288"
+          listService
         />
       </div>
     </div>
   );
 }
 
-export default ListDevice;
+export default ListService;
