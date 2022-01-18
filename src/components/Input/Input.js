@@ -14,6 +14,7 @@ function Input({
   value,
   serviceAdd,
   serviceUpdate,
+  addService,
   subValue,
   updateDevice,
   ...inputProps
@@ -41,20 +42,21 @@ function Input({
         </div>
       ) : null}
 
-      {device || addDevice || serviceAdd || updateDevice ? (
+      {device || addDevice || serviceAdd || updateDevice || addService ? (
         <div
           className={clsx(styles.formGroup, {
             [styles.third]: device,
             [styles.addDevice]: addDevice,
             [styles.serviceAdd]: serviceAdd,
             [styles.updateDevice]: updateDevice,
+            [styles.addService]: addService,
           })}
         >
           <label>
             {label}
             {icon}
           </label>
-          {updateDevice ? (
+          {updateDevice || addService ? (
             <input {...inputProps} value={values} onChange={onChangeValue} />
           ) : (
             <input {...inputProps} onChange={onChange} />

@@ -160,3 +160,20 @@ export const updateDeviceBottom = [
     ],
   },
 ];
+
+export const addServiceLeft = [
+  {
+    name: 'code',
+    type: 'text',
+    value: '201',
+    label: 'Mã dịch vụ:',
+    icon: <span> *</span>,
+  },
+  {
+    name: 'name',
+    type: 'text',
+    value: 'Khám tim mạch',
+    label: 'Tên dịch vụ',
+    icon: <span> *</span>,
+  },
+];

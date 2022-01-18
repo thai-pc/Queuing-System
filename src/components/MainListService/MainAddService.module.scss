@@ -1,0 +1,80 @@
+.addService {
+  box-shadow: var(--box-shadow);
+  border-radius: 1.6rem;
+  width: 117.8rem;
+  height: 53.4rem;
+  background: var(--white);
+  .box {
+    width: 100%;
+    height: 100%;
+    padding: 1.6rem 2.4rem;
+    .formMain {
+      margin-top: 1.2rem;
+      width: 100%;
+      display: flex;
+      .left {
+        width: 50%;
+        display: inline-block;
+        margin-right: 2.4rem;
+      }
+      .right {
+        width: 50%;
+        display: inline-block;
+      }
+    }
+    .bottom {
+      margin-top: 4px;
+      .boxCheckbox {
+        margin-top: 1.2rem;
+        .item {
+          display: flex;
+          margin-bottom: 1.2rem;
+          .group {
+            width: 15%;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: #282739;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            input {
+              margin-right: 0.8rem;
+              width: 2rem;
+              height: 2rem;
+              border: 1.5px solid #4277ff;
+              border-radius: 4px;
+            }
+          }
+          .content {
+            width: 85%;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            .number {
+              padding: 1rem;
+              line-height: 4.4rem;
+              border: 1.5px solid #d4d4d7;
+              box-sizing: border-box;
+              border-radius: 8px;
+            }
+            .to {
+              margin: 0 1.2rem;
+            }
+          }
+        }
+      }
+      .note {
+        font-size: 1.4rem;
+        font-weight: 2.1rem;
+        margin-top: 0.6rem;
+        span {
+          color: var(--red);
+        }
+      }
+    }
+  }
+  .boxButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.4rem;
+  }
+}

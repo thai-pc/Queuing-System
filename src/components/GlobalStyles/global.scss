@@ -24,6 +24,7 @@
   --pink: #f86d6d;
   --dark-blue: #4277ff;
   --bg-dark-blue: #5185f7;
+  --box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
 }
 html {
   font-size: 62.5%;
@@ -87,6 +88,11 @@ select {
 .title {
   font-size: 2.4rem;
   line-height: 3.6rem;
+  color: var(--orange);
+}
+.titleMain {
+  font-size: 2rem;
+  line-height: 3rem;
   color: var(--orange);
 }
 .box {
