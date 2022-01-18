@@ -4,7 +4,7 @@ import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
 import { listService } from '../../components/TopBar/TopBarData';
 import ButtonDevice from '../../components/ButtonDevice/ButtonDevice';
-import ListService from '../../components/MainListDevice/ListService';
+import ListService from '../../components/MainListService/ListService';
 
 function Service() {
   let navigate = useNavigate();

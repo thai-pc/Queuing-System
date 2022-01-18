@@ -79,6 +79,21 @@ export const listService = [
   },
 ];
 
+export const addService = [
+  {
+    title: 'Dịch vụ',
+    path: '',
+  },
+  {
+    title: 'Danh sách dịch vụ',
+    path: '/service/list',
+  },
+  {
+    title: 'Thêm dịch vụ',
+    path: '/service/list/add',
+  },
+];
+
 export const number = [
   {
     title: 'Cấp số',

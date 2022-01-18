@@ -111,11 +111,16 @@
     .body {
       width: 100%;
       .rows {
+        display: inline-block;
         &:nth-child(even) {
           background: #fff2e7;
         }
         &:nth-child(odd) {
           background: var(--white);
+        }
+        &:last-child {
+          border-bottom-left-radius: 1.2rem;
+          border-bottom-right-radius: 1.2rem;
         }
         .col {
           font-size: 1.4rem;

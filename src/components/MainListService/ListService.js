@@ -1,6 +1,6 @@
 import Table from '../Table/Table';
-import styles from './listDevice.module.scss';
-import Top from './Top';
+import Top from '../TopListAll/Top';
+import styles from '../MainListDevice/listDevice.module.scss';
 
 function ListService() {
   return (

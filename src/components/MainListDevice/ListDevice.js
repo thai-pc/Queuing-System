@@ -1,4 +1,4 @@
-import Top from './Top';
+import Top from '../TopListAll/Top';
 import Table from '../Table/Table';
 import styles from './listDevice.module.scss';
 
