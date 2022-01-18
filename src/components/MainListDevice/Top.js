@@ -67,7 +67,7 @@ function Top({ listDevice, listService }) {
             />
           </div>
         ) : null}
-        {listService ? <DateTimePicker /> : null}
+        {listService ? <DateTimePicker listService /> : null}
       </div>
       <div className={styles.keyboard}>
         <form className={styles.search}>
