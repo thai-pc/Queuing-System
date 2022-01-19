@@ -1,3 +1,12 @@
+export const search = [
+  {
+    name: 'search',
+    type: 'text',
+    placeholder: 'Nhập từ khóa',
+    label: 'Từ khóa',
+  },
+];
+
 export const profileLeft = [
   {
     id: 1,

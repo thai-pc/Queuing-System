@@ -7,7 +7,7 @@ import styles from './DateTimePicker.module.scss';
 import './Customized.scss';
 import clsx from 'clsx';
 
-function DateTimePicker({ listService }) {
+function DateTimePicker({ listService, detailService }) {
   const [value, setValue] = React.useState([null, null]);
   return (
     <div>
@@ -24,6 +24,7 @@ function DateTimePicker({ listService }) {
               <div
                 className={clsx(styles.startDay, {
                   [styles.listService]: listService,
+                  [styles.detailService]: detailService,
                 })}
               >
                 <input ref={startProps.inputRef} {...startProps.inputProps} />
@@ -35,6 +36,7 @@ function DateTimePicker({ listService }) {
               <div
                 className={clsx(styles.endDay, {
                   [styles.listService]: listService,
+                  [styles.detailService]: detailService,
                 })}
               >
                 <input ref={endProps.inputRef} {...endProps.inputProps} />

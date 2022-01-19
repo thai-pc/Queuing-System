@@ -1,3 +1,8 @@
+@mixin li {
+  width: 100%;
+  height: 4.4rem;
+  line-height: 4.4rem;
+}
 .chart {
   width: 10.6rem;
   height: 100%;
@@ -7,9 +12,7 @@
     height: 15.2rem;
     top: 4.4rem;
     li {
-      width: 100%;
-      height: 4.4rem;
-      line-height: 4.4rem;
+      @include li();
     }
   }
 }
@@ -22,25 +25,34 @@
     height: 15.2rem;
     top: 4.3rem;
     li {
-      width: 100%;
-      height: 4.4rem;
-      line-height: 4.4rem;
+      @include li();
     }
   }
 }
-.addDevice{
+.addDevice {
   width: 54rem;
   height: 4.4rem;
-  margin-top: .8rem;
+  margin-top: 0.8rem;
   padding: 1rem 1.2rem;
   margin-bottom: 1.6rem;
-  ul{
+  ul {
     width: 54rem;
     top: 4.4rem;
     li {
-      width: 100%;
-      height: 4.4rem;
-      line-height: 4.4rem;
+      @include li();
+    }
+  }
+}
+.detailService {
+  width: 16rem;
+  height: 4.4rem;
+  padding: 1rem 1.2rem;
+  margin-top: 0.4rem;
+  ul {
+    width: 100%;
+    top: 4.4rem;
+    li {
+      @include li();
     }
   }
 }

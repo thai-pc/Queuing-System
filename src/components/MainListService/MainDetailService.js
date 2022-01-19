@@ -1,15 +1,23 @@
+import Table from '../Table/Table';
+import LeftMainDetailService from './LeftMainDetailService';
+import styless from '../MainListDevice/listDevice.module.scss';
 import styles from './MainDetailService.module.scss';
+import TopMainDetailService from './TopMainDetailService';
 
 function MainDetailService() {
   return (
     <div className={styles.detail}>
-      <div className={styles.left}>
-        <div className={styles.container}>
-          <h3 className="titleMain">Thông dịch vụ</h3>
-        </div>
-      </div>
+      <LeftMainDetailService />
       <div className={styles.right}>
-        <div className={styles.container}></div>
+        <div className={styles.container}>
+          <TopMainDetailService />
+          <div className={styless.box}>
+            <Table
+              link="https://jsonblob.com/api/jsonBlob/932648813865484288"
+              listService
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

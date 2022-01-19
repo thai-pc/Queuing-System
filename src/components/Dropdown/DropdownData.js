@@ -42,3 +42,18 @@ export const addDeviceType = [
     label: 'Display counter',
   },
 ];
+
+export const detailService = [
+  {
+    label: 'Tất cả',
+  },
+  {
+    label: 'Đã hoàn thành',
+  },
+  {
+    label: 'Đã thực hiện',
+  },
+  {
+    label: 'Vắng',
+  },
+];

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import Input from '../Input/Input';
+import DateTimePicker from '../DateTimePicker/DateTimePicker';
+import { listDeviceActie, listDeviceConnect } from '../Dropdown/DropdownData';
+import { search } from '../Input/InputData';
 import styles from './Top.module.scss';
 import clsx from 'clsx';
-import { listDeviceActie, listDeviceConnect } from '../Dropdown/DropdownData';
-import DateTimePicker from '../DateTimePicker/DateTimePicker';
 
 function Top({ listDevice, listService }) {
   const [value, setValue] = useState('');
@@ -15,14 +16,6 @@ function Top({ listDevice, listService }) {
   const [showactive, setShowActive] = useState(false);
   const [showaconnect, setShowConnect] = useState(false);
 
-  const search = [
-    {
-      name: 'search',
-      type: 'text',
-      placeholder: 'Nhập từ khóa',
-      label: 'Từ khóa',
-    },
-  ];
   const handleShowActive = () => {
     setShowActive((prev) => !prev);
   };
