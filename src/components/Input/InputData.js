@@ -1,3 +1,49 @@
+export const profileLeft = [
+  {
+    id: 1,
+    name: 'fullname',
+    type: 'text',
+    label: 'Tên người dùng',
+    value: 'Lê Quỳnh Ái Vân',
+  },
+  {
+    id: 2,
+    name: 'phone',
+    type: 'text',
+    label: 'Số điện thoại',
+    value: '0767375921',
+  },
+  {
+    id: 3,
+    name: 'email',
+    type: 'text',
+    label: 'Email',
+    value: 'adminSS01@domain.com',
+  },
+];
+export const profileRight = [
+  {
+    id: 1,
+    name: 'username',
+    type: 'text',
+    label: 'Tên đăng nhập',
+    value: 'lequynhhaivan01',
+  },
+  {
+    id: 2,
+    name: 'password',
+    type: 'text',
+    label: 'Mật khẩu',
+    value: '311940211',
+  },
+  {
+    id: 3,
+    name: 'email',
+    type: 'text',
+    label: 'Vai trò',
+    value: 'Kế toán',
+  },
+];
 export const addDevice = [
   {
     id: 1,

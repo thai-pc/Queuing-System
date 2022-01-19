@@ -1,0 +1,25 @@
+@mixin layout {
+  background: var(--white);
+  border-radius: 1.2rem;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+}
+.detail {
+  display: flex;
+  height: 60.6rem;
+  .left {
+    width: 37rem;
+    margin-right: 2.4rem;
+    @include layout();
+    .container {
+      padding: 1.6rem;
+    }
+  }
+  .right {
+    width: 71.8rem;
+    @include layout();
+    .container {
+      padding: 1.6rem 2.4rem 0 2.4rem;
+    }
+  }
+}

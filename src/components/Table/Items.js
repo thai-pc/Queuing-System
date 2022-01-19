@@ -9,9 +9,9 @@ function Items({ currentItemDevice, currentItemService }) {
   const handeDetail = (e) => {
     e.preventDefault();
     let path = currentItemDevice
-      ? '/device/list/add'
+      ? '/device/list/detail'
       : currentItemService
-      ? '/service/list/add'
+      ? '/service/list/detail'
       : null;
     navigate(path);
   };

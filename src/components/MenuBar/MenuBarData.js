@@ -24,6 +24,9 @@ export const MenuBarData = [
     title: 'Dịch vụ',
     path: '/service/list',
     icon: <ForumOutlinedIcon />,
+    pathAdd: '/service/list/add',
+    pathUpdate: '/service/list/update',
+    pathDetail: '/service/list/detail',
   },
   {
     title: 'Cấp số',

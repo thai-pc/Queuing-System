@@ -44,8 +44,17 @@
   }
 }
 .secondary {
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  position: relative;
+  color: #37474f;
   input {
     width: 38.4rem;
+    height: 4.4rem;
+    margin: 0.2rem 0;
+    color: #535261;
+    padding: 0 1.2rem;
   }
 }
 .third {

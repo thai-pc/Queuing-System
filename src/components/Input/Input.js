@@ -36,9 +36,9 @@ function Input({
         </div>
       ) : null}
       {size ? (
-        <div className={clsx(styles.formGroup, styles.fisrt)}>
+        <div className={clsx(styles.formGroup, { [styles.secondary]: size })}>
           <label>{label}</label>
-          <input {...inputProps} readOnly className={styles.secondary} />
+          <input {...inputProps} readOnly value={value} />
         </div>
       ) : null}
 

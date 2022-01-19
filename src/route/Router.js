@@ -13,6 +13,7 @@ import AddDevice from '../pages/Device/AddDevice';
 import UpdateDevice from '../pages/Device/UpdateDevice';
 import DetailDevice from '../pages/Device/DetailDevice';
 import AddService from '../pages/Service/AddService';
+import DetailService from '../pages/Service/DetailService';
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
         <Route path="/device/list/update" element={<UpdateDevice />}></Route>
         <Route path="/service/list" element={<Service />}></Route>
         <Route path="/service/list/add" element={<AddService />}></Route>
+        <Route path="/service/list/detail" element={<DetailService />}></Route>
         <Route path="/number-level/list" element={<NumberLevel />}></Route>
         <Route path="/report/list" element={<Report />}></Route>
         <Route path="/systems" element={<Systems />}></Route>

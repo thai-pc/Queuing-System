@@ -94,6 +94,21 @@ export const addService = [
   },
 ];
 
+export const detailService = [
+  {
+    title: 'Dịch vụ',
+    path: '',
+  },
+  {
+    title: 'Danh sách dịch vụ',
+    path: '/service/list',
+  },
+  {
+    title: 'Chi tiết',
+    path: '/service/list/detail',
+  },
+];
+
 export const number = [
   {
     title: 'Cấp số',
