@@ -57,3 +57,45 @@ export const detailService = [
     label: 'Vắng',
   },
 ];
+
+export const listNumberSource = [
+  {
+    label: 'Tất cả',
+  },
+  {
+    label: 'Kiosk',
+  },
+  {
+    label: 'Hệ thống',
+  },
+];
+
+export const listNumberActive = [
+  {
+    label: 'Tất cả',
+  },
+  {
+    label: 'Đang chờ',
+  },
+  {
+    label: 'Đã sử dụng',
+  },
+  {
+    label: 'Bỏ qua',
+  },
+];
+
+export const listNumberService = [
+  {
+    label: 'Tất cả',
+  },
+  {
+    label: 'Khám sản - Phụ khoa',
+  },
+  {
+    label: 'Khám răng hàm mặt',
+  },
+  {
+    label: 'Khám tai mũi họng',
+  },
+];

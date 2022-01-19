@@ -36,7 +36,7 @@ function TopMainDetailService() {
         />
       </div>
       <div className={styles.item}>
-        <DateTimePicker detailService />
+        <DateTimePicker listNumber />
       </div>
       <div className={styles.item}>
         <div className={styles.keyboard}>

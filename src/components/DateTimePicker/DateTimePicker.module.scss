@@ -35,6 +35,18 @@
     left: 0.9rem;
   }
 }
+.listNumber {
+  margin-top: 0.4rem;
+  width: 15rem;
+  height: 4.4rem;
+  position: relative;
+  input {
+    padding: 0.8rem 1.6rem;
+  }
+  i {
+    left: 1.6rem;
+  }
+}
 .startDay {
   input {
     @include input();

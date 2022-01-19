@@ -128,23 +128,17 @@ export const updateService = [
   },
 ];
 
-export const number = [
+export const listNumber = [
   {
     title: 'Cấp số',
+    path: '',
+  },
+  {
+    title: 'Danh sách cấp số',
     path: '/number-level/list',
-    titleSub: 'Danh sách cấp số',
-    Child: [
-      {
-        title: 'Cấp số mới',
-        path: '/number-level/list/add',
-      },
-      {
-        title: 'Chi tiết',
-        path: '/number-level/list/detail',
-      },
-    ],
   },
 ];
+
 export const report = [
   {
     title: 'Báo cáo',

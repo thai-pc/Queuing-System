@@ -12,6 +12,7 @@ function Dropdown({
   sizeDevice,
   addDevice,
   detailService,
+  listNumber,
 }) {
   return (
     <>
@@ -40,13 +41,14 @@ function Dropdown({
         </div>
       ) : null}
 
-      {(list && sizeDevice) || addDevice || detailService ? (
+      {(list && sizeDevice) || addDevice || detailService || listNumber ? (
         <div
           className={clsx(styles.dropdown, {
             [styles.border]: showdrop,
             [styles.device]: sizeDevice,
             [styles.addDevice]: addDevice,
             [styles.detailService]: detailService,
+            [styles.listNumber]: listNumber,
           })}
           onClick={handleShow}
         >

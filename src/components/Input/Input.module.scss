@@ -29,6 +29,19 @@
     @include sizeInput();
   }
 }
+@mixin search {
+  label {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #282739;
+    font-weight: bold;
+  }
+  input {
+    padding: 1rem 1.6rem 1rem 1.2rem;
+    width: 100%;
+    height: 4.4rem;
+  }
+}
 .fisrt {
   margin-bottom: 1.2rem;
   font-size: 1.8rem;
@@ -126,16 +139,13 @@
 .detailService {
   width: 20.6rem;
   margin-top: 0.4rem;
+  @include search();
+}
+.listNumber {
+  width: 24rem;
+  @include search();
   label {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: #282739;
-    font-weight: bold;
-  }
-  input {
-    padding: 1rem 1.6rem 1rem 1.2rem;
-    width: 100%;
-    height: 4.4rem;
+    margin-bottom: 0.4rem;
   }
 }
 .formGroup {
