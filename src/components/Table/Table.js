@@ -5,10 +5,10 @@ import clsx from 'clsx';
 import Items from './Items';
 import Title from './Title';
 
-function Table({ link, listDevice, listService }) {
+function Table({ link, listDevice, listService, detailService }) {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const limit = 9;
+  const limit = detailService ? 8 : 9;
 
   //Tính số trang
   const pages = [];
@@ -40,18 +40,21 @@ function Table({ link, listDevice, listService }) {
 
   return (
     <>
-      <div className={styles.content}>
-        <div
-          className={clsx(styles.container, {
-            [styles.listDevice]: listDevice,
-            [styles.listService]: listService,
-          })}
-        >
+      <div
+        className={clsx(styles.content, {
+          [styles.listDevice]: listDevice,
+          [styles.listService]: listService,
+          [styles.detailService]: detailService,
+        })}
+      >
+        <div className={styles.container}>
           <div className={styles.title}>
             {listDevice ? (
               <Title titleListDevice />
             ) : listService ? (
               <Title titleListService />
+            ) : detailService ? (
+              <Title titleDetailService />
             ) : null}
           </div>
           <div className={styles.body}>
@@ -59,6 +62,8 @@ function Table({ link, listDevice, listService }) {
               <Items currentItemDevice={currentItem} />
             ) : listService ? (
               <Items currentItemService={currentItem} />
+            ) : detailService ? (
+              <Items currentItemDetailService={currentItem} />
             ) : null}
           </div>
         </div>

@@ -1,7 +1,7 @@
 import styles from './Table.module.scss';
-import { device, service } from '../Table/TableData';
+import { device, listService, detailService } from '../Table/TableData';
 
-function Title({ titleListDevice, titleListService }) {
+function Title({ titleListDevice, titleListService, titleDetailService }) {
   return (
     <>
       {titleListDevice
@@ -21,7 +21,7 @@ function Title({ titleListDevice, titleListService }) {
           })
         : null}
       {titleListService
-        ? service.map((item, index) => {
+        ? listService.map((item, index) => {
             return (
               <div key={index} className={styles.rows}>
                 <div className={styles.col}>{item.code}</div>
@@ -30,6 +30,16 @@ function Title({ titleListDevice, titleListService }) {
                 <div className={styles.col}>{item.active}</div>
                 <div className={styles.col}></div>
                 <div className={styles.col}></div>
+              </div>
+            );
+          })
+        : null}
+      {titleDetailService
+        ? detailService.map((item, index) => {
+            return (
+              <div key={index} className={styles.rows}>
+                <div className={styles.col}>{item.id}</div>
+                <div className={styles.col}>{item.active}</div>
               </div>
             );
           })

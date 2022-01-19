@@ -4,7 +4,11 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { ReadMore } from './ReadMore';
 import clsx from 'clsx';
 
-function Items({ currentItemDevice, currentItemService }) {
+function Items({
+  currentItemDevice,
+  currentItemService,
+  currentItemDetailService,
+}) {
   let navigate = useNavigate();
   const handeDetail = (e) => {
     e.preventDefault();
@@ -97,6 +101,25 @@ function Items({ currentItemDevice, currentItemService }) {
                   <span className={styles.update} onClick={handeUpdate}>
                     Cập nhật
                   </span>
+                </div>
+              </div>
+            );
+          })
+        : null}
+      {currentItemDetailService
+        ? currentItemDetailService.map((item, index) => {
+            return (
+              <div className={styles.rows} key={index}>
+                <div className={styles.col}>{item.id}</div>
+                <div
+                  className={clsx(styles.col, {
+                    [styles.blue]: item.active === 'Đang thực hiện',
+                    [styles.green]: item.active === 'Đã hoàn thành',
+                    [styles.gray]: item.active === 'Vắng',
+                  })}
+                >
+                  <FiberManualRecordIcon />
+                  {item.active}
                 </div>
               </div>
             );

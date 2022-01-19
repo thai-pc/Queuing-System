@@ -3,6 +3,7 @@ import clsx from 'clsx';
 function Button({
   primary,
   cancel,
+  cancelBg,
   sizeDevice,
   sizeUpdateDevice,
   text,
@@ -11,6 +12,7 @@ function Button({
   const classes = clsx(styles.btn, {
     [styles.primary]: primary,
     [styles.cancel]: cancel,
+    [styles.cancelBg]: cancelBg,
     [styles.sizeDevice]: sizeDevice,
     [styles.sizeUpdateDevice]: sizeUpdateDevice,
   });

@@ -109,6 +109,25 @@ export const detailService = [
   },
 ];
 
+export const updateService = [
+  {
+    title: 'Dịch vụ',
+    path: '',
+  },
+  {
+    title: 'Danh sách dịch vụ',
+    path: '/service/list',
+  },
+  {
+    title: 'Chi tiết',
+    path: '/service/list/detail',
+  },
+  {
+    title: 'Cập nhật',
+    path: '/service/list/update',
+  },
+];
+
 export const number = [
   {
     title: 'Cấp số',

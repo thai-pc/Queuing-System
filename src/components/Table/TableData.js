@@ -8,11 +8,19 @@ export const device = [
     service: 'Dịch vụ sử dụng',
   },
 ];
-export const service = [
+
+export const listService = [
   {
     code: 'Mã dịch vụ',
     name: 'Tên dịch vụ ',
     description: 'Mô tả',
     active: 'Trạng thái hoạt động',
+  },
+];
+
+export const detailService = [
+  {
+    id: 'Số thứ tự',
+    active: 'Trạng thái',
   },
 ];

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
@@ -7,11 +6,11 @@ import Bottom from './Bottom';
 import { addServiceLeft } from '../Input/InputData';
 import styles from './MainAddService.module.scss';
 
-function MainAddService() {
+function MainUpdateService() {
   let navigate = useNavigate();
   const handleCancle = (e) => {
     e.preventDefault();
-    navigate('/service/list');
+    navigate('/service/list/detail');
   };
   return (
     <div className={styles.addService}>
@@ -36,10 +35,10 @@ function MainAddService() {
       </div>
       <div className={styles.boxButton}>
         <Button cancelBg text="Hủy bỏ" sizeDevice onClick={handleCancle} />
-        <Button primary text="Thêm dịch vụ" sizeDevice />
+        <Button primary text="Cập nhật" sizeDevice />
       </div>
     </div>
   );
 }
 
-export default MainAddService;
+export default MainUpdateService;

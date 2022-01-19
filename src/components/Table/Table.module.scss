@@ -12,6 +12,11 @@
   }
 }
 .listDevice {
+  width: 111.2rem;
+  height: 49rem;
+  .page {
+    margin-top: 2.4rem;
+  }
   .col {
     padding-left: 0.8rem;
     &:nth-child(1) {
@@ -56,6 +61,11 @@
   }
 }
 .listService {
+  width: 111.2rem;
+  height: 49rem;
+  .page {
+    margin-top: 2.4rem;
+  }
   .col {
     padding-left: 1.7rem;
     &:nth-child(1) {
@@ -78,10 +88,23 @@
       width: 12.5rem;
     }
   }
+  .body {
+    .rows {
+      display: inline-block;
+    }
+  }
+}
+.detailService {
+  width: 66.9rem;
+  .page {
+    margin-top: 1.6rem;
+  }
+  .col {
+    padding-left: 1.7rem;
+    width: 33.4rem;
+  }
 }
 .content {
-  width: 111.2rem;
-  height: 49rem;
   filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
   border-radius: 12px;
   display: inline-block;
@@ -111,7 +134,6 @@
     .body {
       width: 100%;
       .rows {
-        display: inline-block;
         &:nth-child(even) {
           background: #fff2e7;
         }
@@ -155,13 +177,17 @@
             color: var(--dark-blue);
           }
         }
+        .gray {
+          svg {
+            color: #6c7585;
+          }
+        }
       }
     }
   }
   //Pagination
   .page {
     width: 100%;
-    margin-top: 2.4rem;
     .pagination {
       display: flex;
       float: right;

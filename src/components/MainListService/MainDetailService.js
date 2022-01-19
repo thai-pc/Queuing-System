@@ -13,8 +13,8 @@ function MainDetailService() {
           <TopMainDetailService />
           <div className={styless.box}>
             <Table
-              link="https://jsonblob.com/api/jsonBlob/932648813865484288"
-              listService
+              link="https://jsonblob.com/api/jsonBlob/933313437111697408"
+              detailService
             />
           </div>
         </div>

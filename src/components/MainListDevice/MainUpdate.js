@@ -75,7 +75,12 @@ function MainAdd() {
         </p>
       </div>
       <div className={styles.boxButton}>
-        <Button cancel text="Hủy bỏ" sizeUpdateDevice onClick={handleCancle} />
+        <Button
+          cancelBg
+          text="Hủy bỏ"
+          sizeUpdateDevice
+          onClick={handleCancle}
+        />
         <Button primary text="Cập nhật" sizeUpdateDevice />
       </div>
     </div>
