@@ -70,6 +70,34 @@
     }
   }
 }
+.addNumber {
+  width: 40rem;
+  height: 4.4rem;
+  padding: 1rem 1.2rem;
+  margin-top: 1.2rem;
+  text-align: left;
+  ul {
+    width: 40rem;
+    top: 4.4rem;
+    height: 19.8rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ffc89b;
+      border-radius: 4px;
+    }
+    li {
+      @include li();
+      margin-bottom: 2px;
+      font-size: 1.6rem;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
 //Màu border khi click
 .border {
   border: 1.5px solid var(--orange) !important;

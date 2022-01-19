@@ -104,6 +104,39 @@
     width: 33.4rem;
   }
 }
+.listNumber {
+  .page {
+    margin-top: 2.4rem;
+  }
+  .col {
+    padding-left: 1.7rem;
+    &:nth-child(1) {
+      width: 9.3rem;
+      padding-left: 1.6rem;
+    }
+    &:nth-child(2) {
+      width: 16.2rem;
+    }
+    &:nth-child(3) {
+      width: 17.1rem;
+    }
+    &:nth-child(4) {
+      width: 16.1rem;
+    }
+    &:nth-child(5) {
+      width: 17.4rem;
+    }
+    &:nth-child(6) {
+      width: 14.7rem;
+    }
+    &:nth-child(7) {
+      width: 12rem;
+    }
+    &:nth-child(8) {
+      width: 7.8rem;
+    }
+  }
+}
 .content {
   filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
   border-radius: 12px;

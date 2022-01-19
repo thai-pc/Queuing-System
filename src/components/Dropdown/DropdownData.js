@@ -99,3 +99,23 @@ export const listNumberService = [
     label: 'Khám tai mũi họng',
   },
 ];
+export const listNumberServiceAdd = [
+  {
+    label: 'Khám tim mạch',
+  },
+  {
+    label: 'Khám sản - Phụ khoa',
+  },
+  {
+    label: 'Khám răng hàm mặt',
+  },
+  {
+    label: 'Khám tai mũi họng',
+  },
+  {
+    label: 'Khám tổng quát',
+  },
+  {
+    label: 'Khám hô hấp',
+  },
+];

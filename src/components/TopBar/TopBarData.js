@@ -139,6 +139,21 @@ export const listNumber = [
   },
 ];
 
+export const addNumber = [
+  {
+    title: 'Cấp số',
+    path: '',
+  },
+  {
+    title: 'Danh sách cấp số',
+    path: '/number-level/list',
+  },
+  {
+    title: 'Cấp số mới',
+    path: '/number-level/list/add',
+  },
+];
+
 export const report = [
   {
     title: 'Báo cáo',

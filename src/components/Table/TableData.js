@@ -24,3 +24,15 @@ export const detailService = [
     active: 'Trạng thái',
   },
 ];
+
+export const listNumber = [
+  {
+    id: 'STT',
+    name: 'Tên khách hàng',
+    service: 'Tên dịch vụ',
+    time: 'Thời gian cấp',
+    expiry: 'Hạn sử dụng',
+    active: 'Trạng thái',
+    source: 'Nguồn cấp',
+  },
+];

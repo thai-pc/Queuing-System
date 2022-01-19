@@ -8,8 +8,8 @@ function ListNumber() {
       <TopMainListNumber />
       <div className={styles.box}>
         <Table
-          link="https://jsonblob.com/api/jsonBlob/932648813865484288"
-          listService
+          link="https://jsonblob.com/api/jsonBlob/933375347874086912"
+          listNumber
         />
       </div>
     </div>

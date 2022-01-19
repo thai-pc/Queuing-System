@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import Popup from './Popup/Popup';
+import Popup from '../Popup/Popup';
 import clsx from 'clsx';
 import styles from './TopBarUser.module.scss';
 
@@ -39,7 +39,7 @@ function TopBarUser() {
         >
           <i className="fas fa-bell"></i>
         </button>
-        <Popup popup={popup} setPopup={setPopup} />
+        <Popup popup={popup} setPopup={setPopup} TopBar />
         <div className={styles.boxAvatar}>
           <img src="../../avatar.png" alt="avatar" />
         </div>

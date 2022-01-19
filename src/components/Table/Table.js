@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import Items from './Items';
 import Title from './Title';
 
-function Table({ link, listDevice, listService, detailService }) {
+function Table({ link, listDevice, listService, detailService, listNumber }) {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const limit = detailService ? 8 : 9;
@@ -45,6 +45,7 @@ function Table({ link, listDevice, listService, detailService }) {
           [styles.listDevice]: listDevice,
           [styles.listService]: listService,
           [styles.detailService]: detailService,
+          [styles.listNumber]: listNumber,
         })}
       >
         <div className={styles.container}>
@@ -55,6 +56,8 @@ function Table({ link, listDevice, listService, detailService }) {
               <Title titleListService />
             ) : detailService ? (
               <Title titleDetailService />
+            ) : listNumber ? (
+              <Title titleListNumber />
             ) : null}
           </div>
           <div className={styles.body}>
@@ -64,6 +67,8 @@ function Table({ link, listDevice, listService, detailService }) {
               <Items currentItemService={currentItem} />
             ) : detailService ? (
               <Items currentItemDetailService={currentItem} />
+            ) : listNumber ? (
+              <Items currentItemListNumber={currentItem} />
             ) : null}
           </div>
         </div>

@@ -10,7 +10,7 @@ function NumberLevel() {
   let navigate = useNavigate();
   const handleAdd = (e) => {
     e.preventDefault();
-    navigate('/service/list/add');
+    navigate('/number-level/list/add');
   };
   return (
     <div className="Layout d-flex">

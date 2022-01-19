@@ -8,6 +8,7 @@ function Items({
   currentItemDevice,
   currentItemService,
   currentItemDetailService,
+  currentItemListNumber,
 }) {
   let navigate = useNavigate();
   const handeDetail = (e) => {
@@ -16,6 +17,8 @@ function Items({
       ? '/device/list/detail'
       : currentItemService
       ? '/service/list/detail'
+      : currentItemListNumber
+      ? '/number-level/list/detail'
       : null;
     navigate(path);
   };
@@ -120,6 +123,35 @@ function Items({
                 >
                   <FiberManualRecordIcon />
                   {item.active}
+                </div>
+              </div>
+            );
+          })
+        : null}
+      {currentItemListNumber
+        ? currentItemListNumber.map((item, index) => {
+            return (
+              <div className={styles.rows} key={index}>
+                <div className={styles.col}>{item.id}</div>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.service}</div>
+                <div className={styles.col}>{item.time}</div>
+                <div className={styles.col}>{item.expiry}</div>
+                <div
+                  className={clsx(styles.col, {
+                    [styles.red]: item.active === 'Bỏ qua',
+                    [styles.gray]: item.active === 'Đã sử dụng',
+                    [styles.blue]: item.active === 'Đang chờ',
+                  })}
+                >
+                  <FiberManualRecordIcon />
+                  {item.active}
+                </div>
+                <div className={styles.col}>{item.source}</div>
+                <div className={styles.col}>
+                  <span className={styles.details} onClick={handeDetail}>
+                    Chi tiết
+                  </span>
                 </div>
               </div>
             );
