@@ -8,10 +8,14 @@ import './Customized.scss';
 import clsx from 'clsx';
 
 function DateTimePicker({ listService, detailService, listNumber }) {
+  const h3Style = {
+    fontSize: '1.6rem',
+    lineHeight: '2.4rem',
+  };
   const [value, setValue] = React.useState([null, null]);
   return (
     <div>
-      <h3>Chọn thời gian</h3>
+      <h3 style={h3Style}>Chọn thời gian</h3>
       <LocalizationProvider dateAdapter={DateAdapter}>
         <DateRangePicker
           calendars={1}

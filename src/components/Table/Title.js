@@ -4,6 +4,7 @@ import {
   listService,
   detailService,
   listNumber,
+  listReport,
 } from '../Table/TableData';
 
 function Title({
@@ -11,6 +12,7 @@ function Title({
   titleListService,
   titleDetailService,
   titleListNumber,
+  titleReport,
 }) {
   return (
     <>
@@ -66,6 +68,19 @@ function Title({
                 <div className={styles.col}>{item.active}</div>
                 <div className={styles.col}>{item.source}</div>
                 <div className={styles.col}></div>
+              </div>
+            );
+          })
+        : null}
+      {titleReport
+        ? listReport.map((item, index) => {
+            return (
+              <div key={index} className={styles.rows}>
+                <div className={styles.col}>{item.id}</div>
+                <div className={styles.col}>{item.service}</div>
+                <div className={styles.col}>{item.time}</div>
+                <div className={styles.col}>{item.active}</div>
+                <div className={styles.col}>{item.source}</div>
               </div>
             );
           })

@@ -171,8 +171,11 @@ export const detailNumber = [
 export const report = [
   {
     title: 'Báo cáo',
+    path: '',
+  },
+  {
+    title: 'Lập báo cáo',
     path: '/report/list',
-    titleSub: 'Lập báo cáo',
   },
 ];
 export const Role = [

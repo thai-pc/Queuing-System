@@ -137,6 +137,29 @@
     }
   }
 }
+.report {
+  .page {
+    margin-top: 2.4rem;
+  }
+  .col {
+    padding-left: 1.6rem;
+    &:nth-child(1) {
+      width: 22.6rem;
+    }
+    &:nth-child(2) {
+      width: 23.2rem;
+    }
+    &:nth-child(3) {
+      width: 23.8rem;
+    }
+    &:nth-child(4) {
+      width: 21.6rem;
+    }
+    &:nth-child(5) {
+      width: 19.6rem;
+    }
+  }
+}
 .content {
   filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
   border-radius: 12px;

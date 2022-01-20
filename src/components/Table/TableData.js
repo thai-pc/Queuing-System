@@ -36,3 +36,13 @@ export const listNumber = [
     source: 'Nguồn cấp',
   },
 ];
+
+export const listReport = [
+  {
+    id: 'STT',
+    service: 'Tên dịch vụ',
+    time: 'Thời gian cấp',
+    active: 'Trạng thái',
+    source: 'Nguồn cấp',
+  },
+];

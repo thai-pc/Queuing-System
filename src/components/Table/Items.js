@@ -9,6 +9,7 @@ function Items({
   currentItemService,
   currentItemDetailService,
   currentItemListNumber,
+  currentItemReport,
 }) {
   let navigate = useNavigate();
   const handeDetail = (e) => {
@@ -153,6 +154,28 @@ function Items({
                     Chi tiết
                   </span>
                 </div>
+              </div>
+            );
+          })
+        : null}
+      {currentItemReport
+        ? currentItemReport.map((item, index) => {
+            return (
+              <div className={styles.rows} key={index}>
+                <div className={styles.col}>{item.id}</div>
+                <div className={styles.col}>{item.service}</div>
+                <div className={styles.col}>{item.time}</div>
+                <div
+                  className={clsx(styles.col, {
+                    [styles.red]: item.active === 'Bỏ qua',
+                    [styles.gray]: item.active === 'Đã sử dụng',
+                    [styles.blue]: item.active === 'Đang chờ',
+                  })}
+                >
+                  <FiberManualRecordIcon />
+                  {item.active}
+                </div>
+                <div className={styles.col}>{item.source}</div>
               </div>
             );
           })
