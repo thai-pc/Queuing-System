@@ -1,4 +1,5 @@
-import styles from './Table.module.scss';
+import { useState } from 'react';
+import DropdownTable from './DropdownTable';
 import {
   device,
   listService,
@@ -6,6 +7,14 @@ import {
   listNumber,
   listReport,
 } from '../Table/TableData';
+import {
+  idReport,
+  serviceReport,
+  timeReport,
+  activeReport,
+  sourceReport,
+} from './DropdownTableData';
+import styles from './Table.module.scss';
 
 function Title({
   titleListDevice,
@@ -14,6 +23,28 @@ function Title({
   titleListNumber,
   titleReport,
 }) {
+  const [isId, setIsID] = useState(false);
+  const [isService, setService] = useState(false);
+  const [isTime, setTime] = useState(false);
+  const [isActive, setActive] = useState(false);
+  const [isSource, setSource] = useState(false);
+
+  const handleClickId = () => {
+    setIsID(!isId);
+  };
+  const handleClickService = () => {
+    setService(!isService);
+  };
+  const handleClickTime = () => {
+    setTime(!isTime);
+  };
+  const handleClickActive = () => {
+    setActive(!isActive);
+  };
+  const handleClickSource = () => {
+    setSource(!isSource);
+  };
+
   return (
     <>
       {titleListDevice
@@ -76,11 +107,41 @@ function Title({
         ? listReport.map((item, index) => {
             return (
               <div key={index} className={styles.rows}>
-                <div className={styles.col}>{item.id}</div>
-                <div className={styles.col}>{item.service}</div>
-                <div className={styles.col}>{item.time}</div>
-                <div className={styles.col}>{item.active}</div>
-                <div className={styles.col}>{item.source}</div>
+                <div className={styles.col}>
+                  {item.id}
+                  <span className={styles.filter} onClick={handleClickId}>
+                    <i className="far fa-arrows-v"></i>
+                  </span>
+                  {isId && <DropdownTable list={idReport} scroll />}
+                </div>
+                <div className={styles.col}>
+                  {item.service}
+                  <span className={styles.filter} onClick={handleClickService}>
+                    <i className="far fa-arrows-v"></i>
+                  </span>
+                  {isService && <DropdownTable list={serviceReport} service />}
+                </div>
+                <div className={styles.col}>
+                  {item.time}
+                  <span className={styles.filter} onClick={handleClickTime}>
+                    <i className="far fa-arrows-v"></i>
+                  </span>
+                  {isTime && <DropdownTable list={timeReport} scroll />}
+                </div>
+                <div className={styles.col}>
+                  {item.active}
+                  <span className={styles.filter} onClick={handleClickActive}>
+                    <i className="far fa-arrows-v"></i>
+                  </span>
+                  {isActive && <DropdownTable list={activeReport} />}
+                </div>
+                <div className={styles.col}>
+                  {item.source}
+                  <span className={styles.filter} onClick={handleClickSource}>
+                    <i className="far fa-arrows-v"></i>
+                  </span>
+                  {isSource && <DropdownTable list={sourceReport} />}
+                </div>
               </div>
             );
           })
