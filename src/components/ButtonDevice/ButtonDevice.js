@@ -12,6 +12,7 @@ function ButtonDevice({
   detail,
   device,
   service,
+  detailNumber,
 }) {
   return (
     <div
@@ -19,6 +20,7 @@ function ButtonDevice({
         [styles.detail]: detail,
         [styles.device]: device,
         [styles.service]: service,
+        [styles.detailNumber]: detailNumber,
       })}
     >
       <div className={styles.item} onClick={handleLink}>

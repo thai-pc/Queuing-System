@@ -16,6 +16,7 @@ import AddService from '../pages/Service/AddService';
 import DetailService from '../pages/Service/DetailService';
 import UpdateServic from '../pages/Service/UpdateServic';
 import AddNumber from '../pages/NumberLevel/AddNumber';
+import DetailNumber from '../pages/NumberLevel/DetailNumber';
 
 function Router() {
   return (
@@ -35,6 +36,10 @@ function Router() {
         <Route path="/service/list/update" element={<UpdateServic />}></Route>
         <Route path="/number-level/list" element={<NumberLevel />}></Route>
         <Route path="/number-level/list/add" element={<AddNumber />}></Route>
+        <Route
+          path="/number-level/list/detail"
+          element={<DetailNumber />}
+        ></Route>
         <Route path="/report/list" element={<Report />}></Route>
         <Route path="/systems" element={<Systems />}></Route>
       </Routes>

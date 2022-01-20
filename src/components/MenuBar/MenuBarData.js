@@ -32,6 +32,8 @@ export const MenuBarData = [
     title: 'Cấp số',
     path: '/number-level/list',
     icon: <LayersOutlinedIcon />,
+    pathAdd: '/number-level/list/add',
+    pathDetail: '/number-level/list/detail',
   },
   {
     title: 'Báo cáo',

@@ -1,16 +1,15 @@
 import { useNavigate } from 'react-router-dom';
-import MainDetail from '../../components/MainListDevice/MainDetail';
+import MainDetailNumber from '../../components/MainListNumber/MainDetailNumber';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import SubTitle from '../../components/TopBar/SubTitle';
 import TopBarUser from '../../components/TopBar/TopBarUser';
 import ButtonDevice from '../../components/ButtonDevice/ButtonDevice';
-import { detailDevice } from '../../components/TopBar/TopBarData';
+import { detailNumber } from '../../components/TopBar/TopBarData';
 
-function DetailDevice() {
+function DetailNumber() {
   let navigate = useNavigate();
-  const handleUpdate = (e) => {
-    e.preventDefault();
-    navigate('/device/list/update');
+  const handleCancel = () => {
+    navigate('/number-level/list');
   };
   return (
     <div className="Layout d-flex">
@@ -18,18 +17,18 @@ function DetailDevice() {
       <div className="context">
         <div className="boxTopbar">
           <div className="container">
-            <SubTitle list={detailDevice} />
+            <SubTitle list={detailNumber} />
             <TopBarUser />
           </div>
         </div>
         <div className="box">
-          <h3 className="title">Quản lý thiết bị</h3>
-          <MainDetail />
+          <h3 className="title">Quản lý cấp số</h3>
+          <MainDetailNumber />
           <ButtonDevice
-            type="Cập nhật thiết bị"
-            icon="fas fa-caret-square-left"
-            handleLink={handleUpdate}
-            detail
+            type="Quay lại"
+            icon="fas fa-pen-square"
+            handleLink={handleCancel}
+            detailNumber
           />
         </div>
       </div>
@@ -37,4 +36,4 @@ function DetailDevice() {
   );
 }
 
-export default DetailDevice;
+export default DetailNumber;

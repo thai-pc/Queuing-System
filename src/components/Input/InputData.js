@@ -1,3 +1,4 @@
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 export const search = [
   {
     name: 'search',
@@ -230,5 +231,47 @@ export const addServiceLeft = [
     value: 'Khám tim mạch',
     label: 'Tên dịch vụ',
     icon: <span> *</span>,
+  },
+];
+
+export const detailNumberLeft = [
+  {
+    title: 'Họ tên:',
+    text: 'Nguyễn Thị Dung',
+  },
+  {
+    title: 'Tên dịch vụ:',
+    text: 'Khám tim mạch',
+  },
+  {
+    title: 'Số thứ tự:',
+    text: '2001201',
+  },
+  {
+    title: 'Thời gian cấp:',
+    text: '14:35 - 07/11/2021',
+  },
+  {
+    title: 'Hạn sử dụng:',
+    text: '18:00 - 07/11/2021',
+  },
+];
+export const detailNumberRight = [
+  {
+    title: 'Nguồn cấp:',
+    text: 'Kiosk',
+  },
+  {
+    title: 'Trạng thái:',
+    icon: <FiberManualRecordIcon />,
+    text: 'Đang chờ',
+  },
+  {
+    title: 'Số điện thoại:',
+    text: '0948523623',
+  },
+  {
+    title: 'Địa chỉ Email:',
+    text: 'nguyendung@gmail.com',
   },
 ];

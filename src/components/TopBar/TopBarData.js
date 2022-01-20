@@ -154,6 +154,20 @@ export const addNumber = [
   },
 ];
 
+export const detailNumber = [
+  {
+    title: 'Cấp số',
+    path: '',
+  },
+  {
+    title: 'Danh sách cấp số',
+    path: '/number-level/list',
+  },
+  {
+    title: 'Chi tiết',
+    path: '/number-level/list/detail',
+  },
+];
 export const report = [
   {
     title: 'Báo cáo',
