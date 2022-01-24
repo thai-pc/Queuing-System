@@ -12,10 +12,11 @@ function Table({
   detailService,
   listNumber,
   report,
+  listRole,
 }) {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const limit = detailService ? 8 : report ? 10 : 9;
+  const limit = detailService ? 8 : report ? 10 : listRole ? 6 : 9;
 
   //Tính số trang
   const pages = [];

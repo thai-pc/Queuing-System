@@ -14,6 +14,7 @@ function ButtonDevice({
   service,
   detailNumber,
   report,
+  listRole,
 }) {
   return (
     <div
@@ -23,6 +24,7 @@ function ButtonDevice({
         [styles.service]: service,
         [styles.detailNumber]: detailNumber,
         [styles.report]: report,
+        [styles.listRole]: listRole,
       })}
     >
       <div className={styles.item} onClick={handleLink}>

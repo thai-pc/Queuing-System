@@ -1,0 +1,32 @@
+.role {
+  padding-top: 0.8rem;
+  width: 111.2rem;
+  .table {
+    position: relative;
+    margin-top: 1.6rem;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    .text {
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      color: var(--orange);
+    }
+    .keyboard {
+      .search {
+        position: relative;
+        .btn {
+          position: absolute;
+          right: 1.2rem;
+          color: var(--orange);
+          font-size: 1.6rem;
+          z-index: 7;
+          bottom: 1.2rem;
+          background: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

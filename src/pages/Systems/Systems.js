@@ -1,6 +1,5 @@
 import MenuBar from '../../components/MenuBar/MenuBar';
 import TopBarUser from '../../components/TopBar/TopBarUser';
-import SubSystems from '../../components/MenuBar/SubSystems';
 
 function Systems() {
   return (
@@ -12,6 +11,7 @@ function Systems() {
             <TopBarUser />
           </div>
         </div>
+        <div className="box"></div>
       </div>
     </div>
   );

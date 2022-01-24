@@ -45,5 +45,8 @@ export const MenuBarData = [
     path: '/systems',
     icon: <SettingsOutlinedIcon />,
     openIcon: <MoreVertOutlinedIcon />,
+    pathListRole: '/systems/role/list',
+    pathAddRole: '/systems/role/add',
+    pathUpdateRole: '/systems/role/update',
   },
 ];
