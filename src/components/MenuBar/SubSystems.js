@@ -5,15 +5,15 @@ function SubSystems() {
   const subNav = [
     {
       title: 'Quản lý vai trò',
-      path: '/systems/role',
+      path: '/systems/role/list',
     },
     {
       title: 'Quản lý tài khoản',
-      path: '/systems/account',
+      path: '/systems/account/list',
     },
     {
       title: 'Nhật ký người dùng',
-      path: '/systems/diary',
+      path: '/systems/diary/list',
     },
   ];
   return (

@@ -12,12 +12,13 @@ function DateTimePicker({ listService, detailService, listNumber }) {
     fontSize: '1.6rem',
     lineHeight: '2.4rem',
   };
-  const [value, setValue] = React.useState([null, null]);
+  const [value, setValue] = React.useState([Date(), null]);
   return (
     <div>
       <h3 style={h3Style}>Chọn thời gian</h3>
       <LocalizationProvider dateAdapter={DateAdapter}>
         <DateRangePicker
+          format="DD-MM-YYYY"
           calendars={1}
           value={value}
           onChange={(newValue) => {

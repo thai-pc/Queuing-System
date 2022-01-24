@@ -17,6 +17,7 @@ import DetailService from '../pages/Service/DetailService';
 import UpdateServic from '../pages/Service/UpdateServic';
 import AddNumber from '../pages/NumberLevel/AddNumber';
 import DetailNumber from '../pages/NumberLevel/DetailNumber';
+import Role from '../pages/Systems/Role';
 
 function Router() {
   return (
@@ -42,6 +43,7 @@ function Router() {
         ></Route>
         <Route path="/report/list" element={<Report />}></Route>
         <Route path="/systems" element={<Systems />}></Route>
+        <Route path="/systems/role/list" element={<Role />}></Route>
       </Routes>
     </BrowserRouter>
   );

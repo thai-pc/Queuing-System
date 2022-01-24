@@ -5,11 +5,37 @@
   span {
     color: var(--orange);
     font-weight: bold;
+    font-size: 1.4rem !important;
   }
 }
 .css-1n2mv2k {
   span {
     color: var(--orange);
-    font-size: bold;
+    font-weight: bold;
+    font-size: 1.4rem !important;
   }
+}
+.css-1o490ea-MuiDateRangePickerDay-rangeIntervalPreview {
+  button {
+    font-size: 1.4rem !important;
+  }
+}
+button.MuiButtonBase-root.MuiPickersDay-root.MuiDateRangePickerDay-day.MuiDateRangePickerDay-notSelectedDate.MuiDateRangePickerDay-dayOutsideRangeInterval.css-qhrdzm-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day {
+  &:hover {
+    border-radius: 8px;
+  }
+}
+button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-today.MuiDateRangePickerDay-day.MuiDateRangePickerDay-notSelectedDate.MuiDateRangePickerDay-dayOutsideRangeInterval.css-1rhx85y-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day {
+  border-radius: 8px;
+}
+button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiDateRangePickerDay-day.css-pgdzhj-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day {
+  border-radius: 8px;
+  background-color: var(--orange);
+}
+button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiDateRangePickerDay-day.MuiDateRangePickerDay-dayOutsideRangeInterval.css-jwafdq-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day {
+  border-radius: 8px;
+  background-color: var(--orange);
+}
+.css-1f2kitb-MuiDateRangePickerDay-root {
+  background-color: #fff2e7 !important;
 }

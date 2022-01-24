@@ -178,21 +178,14 @@ export const report = [
     path: '/report/list',
   },
 ];
-export const Role = [
+export const systemRole = [
   {
     title: 'Cài đặt hệ thống',
-    path: '/system/role',
-    titleSub: 'Quản lý vai trò',
-    Child: [
-      {
-        title: 'Thêm vai trò',
-        path: '/system/role/add',
-      },
-      {
-        title: 'Cập nhật vai trò',
-        path: '/system/role/update',
-      },
-    ],
+    path: '',
+  },
+  {
+    title: 'Quản lý vai trò',
+    path: '/systems/role/list',
   },
 ];
 export const Account = [
