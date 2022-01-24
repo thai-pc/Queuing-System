@@ -46,3 +46,11 @@ export const listReport = [
     source: 'Nguồn cấp',
   },
 ];
+
+export const listRole = [
+  {
+    name: 'Tên vai trò',
+    user: 'Số người dùng',
+    description: 'Mô tả',
+  },
+];

@@ -6,6 +6,7 @@ import {
   detailService,
   listNumber,
   listReport,
+  listRole,
 } from '../Table/TableData';
 import {
   idReport,
@@ -22,6 +23,7 @@ function Title({
   titleDetailService,
   titleListNumber,
   titleReport,
+  titleListRole,
 }) {
   const [isId, setIsID] = useState(false);
   const [isService, setService] = useState(false);
@@ -142,6 +144,18 @@ function Title({
                   </span>
                   {isSource && <DropdownTable list={sourceReport} />}
                 </div>
+              </div>
+            );
+          })
+        : null}
+      {titleListRole
+        ? listRole.map((item, index) => {
+            return (
+              <div key={index} className={styles.rows}>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.user}</div>
+                <div className={styles.col}>{item.description}</div>
+                <div className={styles.col}></div>
               </div>
             );
           })

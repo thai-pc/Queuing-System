@@ -169,6 +169,23 @@
     }
   }
 }
+.listRole {
+  .col {
+    padding-left: 1.7rem;
+    &:nth-child(1) {
+      width: 22.4rem;
+    }
+    &:nth-child(2) {
+      width: 22.4rem;
+    }
+    &:nth-child(3) {
+      width: 53.7rem;
+    }
+    &:nth-child(4) {
+      width: 12.5rem;
+    }
+  }
+}
 .content {
   filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
   border-radius: 12px;

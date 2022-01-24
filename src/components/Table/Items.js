@@ -10,6 +10,7 @@ function Items({
   currentItemDetailService,
   currentItemListNumber,
   currentItemReport,
+  currentItemListRole,
 }) {
   let navigate = useNavigate();
   const handeDetail = (e) => {
@@ -29,6 +30,8 @@ function Items({
       ? '/device/list/update'
       : currentItemService
       ? '/service/list/update'
+      : currentItemListRole
+      ? '/systems/role/update'
       : null;
     navigate(path);
   };
@@ -176,6 +179,22 @@ function Items({
                   {item.active}
                 </div>
                 <div className={styles.col}>{item.source}</div>
+              </div>
+            );
+          })
+        : null}
+      {currentItemListRole
+        ? currentItemListRole.map((item, index) => {
+            return (
+              <div className={styles.rows} key={index}>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.user}</div>
+                <div className={styles.col}>{item.description}</div>
+                <div className={styles.col}>
+                  <span className={styles.update} onClick={handeUpdate}>
+                    Cập nhật
+                  </span>
+                </div>
               </div>
             );
           })

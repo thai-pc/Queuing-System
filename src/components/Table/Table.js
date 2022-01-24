@@ -55,6 +55,7 @@ function Table({
           [styles.detailService]: detailService,
           [styles.listNumber]: listNumber,
           [styles.report]: report,
+          [styles.listRole]: listRole,
         })}
       >
         <div className={styles.container}>
@@ -69,6 +70,8 @@ function Table({
               <Title titleListNumber />
             ) : report ? (
               <Title titleReport />
+            ) : listRole ? (
+              <Title titleListRole />
             ) : null}
           </div>
           <div className={styles.body}>
@@ -82,32 +85,36 @@ function Table({
               <Items currentItemListNumber={currentItem} />
             ) : report ? (
               <Items currentItemReport={currentItem} />
+            ) : listRole ? (
+              <Items currentItemListRole={currentItem} />
             ) : null}
           </div>
         </div>
-        <div className={styles.page}>
-          <ReactPaginate
-            breakLabel="..."
-            nextLabel={<i className="fas fa-caret-right"></i>}
-            pageCount={pageCount}
-            pageRangeDisplayed={5}
-            marginPagesDisplayed={1}
-            previousLabel={<i className="fas fa-caret-left"></i>}
-            onPageChange={handlePageClick}
-            containerClassName={styles.pagination}
-            pageClassName={styles.pageItem}
-            pageLinkClassName={styles.pageLink}
-            previousClassName={styles.pageItem}
-            previousLinkClassName={styles.pageLink}
-            nextClassName={styles.pageItem}
-            nextLinkClassName={styles.pageLink}
-            breakClassName={styles.pageItem}
-            breakLinkClassName={styles.pageLink}
-            activeClassName={styles.active}
-            activeLinkClassName={styles.activeLink}
-            disabledClassName={styles.disabled}
-          />
-        </div>
+        {listRole ? null : (
+          <div className={styles.page}>
+            <ReactPaginate
+              breakLabel="..."
+              nextLabel={<i className="fas fa-caret-right"></i>}
+              pageCount={pageCount}
+              pageRangeDisplayed={5}
+              marginPagesDisplayed={1}
+              previousLabel={<i className="fas fa-caret-left"></i>}
+              onPageChange={handlePageClick}
+              containerClassName={styles.pagination}
+              pageClassName={styles.pageItem}
+              pageLinkClassName={styles.pageLink}
+              previousClassName={styles.pageItem}
+              previousLinkClassName={styles.pageLink}
+              nextClassName={styles.pageItem}
+              nextLinkClassName={styles.pageLink}
+              breakClassName={styles.pageItem}
+              breakLinkClassName={styles.pageLink}
+              activeClassName={styles.active}
+              activeLinkClassName={styles.activeLink}
+              disabledClassName={styles.disabled}
+            />
+          </div>
+        )}
       </div>
     </>
   );
