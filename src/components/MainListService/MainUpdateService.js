@@ -28,7 +28,7 @@ function MainUpdateService() {
             ))}
           </div>
           <div className={styles.right}>
-            <Textarea label="Mô tả:" placeholder="Mô tả dịch vụ" />
+            <Textarea label="Mô tả:" placeholder="Mô tả dịch vụ" service />
           </div>
         </div>
         <Bottom />

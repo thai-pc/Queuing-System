@@ -188,6 +188,34 @@ export const systemRole = [
     path: '/systems/role/list',
   },
 ];
+export const systemAddRole = [
+  {
+    title: 'Cài đặt hệ thống',
+    path: '',
+  },
+  {
+    title: 'Quản lý vai trò',
+    path: '/systems/role/list',
+  },
+  {
+    title: 'Thêm vai trò',
+    path: '/systems/role/add',
+  },
+];
+export const systemUpdateRole = [
+  {
+    title: 'Cài đặt hệ thống',
+    path: '',
+  },
+  {
+    title: 'Quản lý vai trò',
+    path: '/systems/role/list',
+  },
+  {
+    title: 'Cập nhật vai trò',
+    path: '/systems/role/update',
+  },
+];
 export const Account = [
   {
     title: 'Cài đặt hệ thống',

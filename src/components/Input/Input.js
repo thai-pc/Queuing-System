@@ -19,6 +19,7 @@ function Input({
   updateDevice,
   detailService,
   listNumber,
+  AddUpdateRole,
   ...inputProps
 }) {
   const [values, setValues] = useState(value);
@@ -50,6 +51,7 @@ function Input({
       updateDevice ||
       addService ||
       detailService ||
+      AddUpdateRole ||
       listNumber ? (
         <div
           className={clsx(styles.formGroup, {
@@ -60,13 +62,14 @@ function Input({
             [styles.addService]: addService,
             [styles.detailService]: detailService,
             [styles.listNumber]: listNumber,
+            [styles.AddUpdateRole]: AddUpdateRole,
           })}
         >
           <label>
             {label}
             {icon}
           </label>
-          {updateDevice || addService ? (
+          {updateDevice || addService || AddUpdateRole ? (
             <input {...inputProps} value={values} onChange={onChangeValue} />
           ) : (
             <input {...inputProps} onChange={onChange} />

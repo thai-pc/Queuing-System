@@ -148,6 +148,16 @@
     margin-bottom: 0.4rem;
   }
 }
+.AddUpdateRole {
+  width: 56rem;
+  @include search();
+  label {
+    margin-bottom: 0.8rem;
+    span {
+      color: var(--red);
+    }
+  }
+}
 .formGroup {
   display: flex;
   flex-direction: column;
