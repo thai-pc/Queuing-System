@@ -51,7 +51,72 @@ function MainAddUpdateRole({ addRole, updateRole }) {
                 <span>*</span> Là trường thông tin bắt buộc
               </p>
             </div>
-            <div className={styles.right}></div>
+            <div className={styles.right}>
+              <label>
+                Phân quyền chức năng <span>*</span>
+              </label>
+              <div className={styles.box}>
+                <div className={styles.rows}>
+                  <ul className={styles.group}>
+                    <li className="titleMain">Nhóm chức năng A</li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                  </ul>
+                  <ul className={styles.group}>
+                    <li className="titleMain">Nhóm chức năng A</li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                  </ul>
+                  <ul className={styles.group}>
+                    <li className="titleMain">Nhóm chức năng A</li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                    <li className={styles.check}>
+                      <input type="checkbox" />
+                      <span>Tất cả</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
