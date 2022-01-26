@@ -16,6 +16,30 @@ function MainAddUpdateRole({ addRole, updateRole }) {
       icon: <span> *</span>,
     },
   ];
+  const checkBox = [
+    {
+      title: 'Nhóm chức năng A',
+      all: 'Tất cả',
+      x: 'Chức năng x',
+      y: 'Chức năng y',
+      z: 'Chức năng z',
+      checked: updateRole ? true : false,
+    },
+    {
+      title: 'Nhóm chức năng B',
+      all: 'Tất cả',
+      x: 'Chức năng x',
+      y: 'Chức năng y',
+      z: 'Chức năng z',
+    },
+    {
+      title: 'Nhóm chức năng C',
+      all: 'Tất cả',
+      x: 'Chức năng x',
+      y: 'Chức năng y',
+      z: 'Chức năng z',
+    },
+  ];
   let navigate = useNavigate();
   const handleCancle = (e) => {
     e.preventDefault();
@@ -57,63 +81,29 @@ function MainAddUpdateRole({ addRole, updateRole }) {
               </label>
               <div className={styles.box}>
                 <div className={styles.rows}>
-                  <ul className={styles.group}>
-                    <li className="titleMain">Nhóm chức năng A</li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                  </ul>
-                  <ul className={styles.group}>
-                    <li className="titleMain">Nhóm chức năng A</li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                  </ul>
-                  <ul className={styles.group}>
-                    <li className="titleMain">Nhóm chức năng A</li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                    <li className={styles.check}>
-                      <input type="checkbox" />
-                      <span>Tất cả</span>
-                    </li>
-                  </ul>
+                  {checkBox.map((item, index) => {
+                    return (
+                      <ul className={styles.group}>
+                        <li className="titleMain">{item.title}</li>
+                        <li className={styles.check}>
+                          <input type="checkbox" checked={item.checked} />
+                          <span>{item.all}</span>
+                        </li>
+                        <li className={styles.check}>
+                          <input type="checkbox" checked={item.checked} />
+                          <span>{item.x}</span>
+                        </li>
+                        <li className={styles.check}>
+                          <input type="checkbox" checked={item.checked} />
+                          <span>{item.y}</span>
+                        </li>
+                        <li className={styles.check}>
+                          <input type="checkbox" checked={item.checked} />
+                          <span>{item.z}</span>
+                        </li>
+                      </ul>
+                    );
+                  })}
                 </div>
               </div>
             </div>
