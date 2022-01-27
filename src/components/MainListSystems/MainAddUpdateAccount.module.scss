@@ -1,0 +1,45 @@
+.AddUpdateAccount {
+  margin-top: 0.8rem;
+  .container {
+    margin-top: 3.2rem;
+    background: var(--white);
+    width: 119.2rem;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+    height: 53.4rem;
+    .rows {
+      padding: 1.6rem 2.4rem 2.4rem 2.4rem;
+      .formMain {
+        padding-top: 1.2rem;
+        display: flex;
+        .left {
+          width: 50%;
+          margin-right: 2.4rem;
+          .item {
+            margin-bottom: 1.6rem;
+          }
+        }
+        .right {
+          width: 50%;
+          label {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #282739;
+            line-height: 2.4rem;
+            span {
+              color: var(--red);
+            }
+          }
+          .item {
+            margin-bottom: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+  .boxButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.4rem;
+  }
+}
