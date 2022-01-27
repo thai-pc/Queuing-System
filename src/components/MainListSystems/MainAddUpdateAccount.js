@@ -148,7 +148,13 @@ function MainAddUpdateAccount({ addAccount, updateAccount }) {
                       >
                         <i
                           className={
-                            showPassword ? 'fal fa-eye' : 'fal fa-eye-slash'
+                            input.name === 'password'
+                              ? showPassword
+                                ? 'fal fa-eye'
+                                : 'fal fa-eye-slash'
+                              : showConfirm
+                              ? 'fal fa-eye'
+                              : 'fal fa-eye-slash'
                           }
                         ></i>
                       </span>

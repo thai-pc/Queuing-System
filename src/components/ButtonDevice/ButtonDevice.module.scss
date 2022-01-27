@@ -1,12 +1,15 @@
+@mixin i23 {
+  i {
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+  }
+}
 .detail {
   height: 9.4rem;
   top: 5.2rem;
   .item {
     padding: 1.6rem 0.4rem;
-    i {
-      font-size: 2.3rem;
-      line-height: 2.3rem;
-    }
+    @include i23();
   }
 }
 .device {
@@ -14,10 +17,7 @@
   top: 13.5rem;
   .item {
     padding: 1.2rem;
-    i {
-      font-size: 2.8rem;
-      line-height: 2.8rem;
-    }
+    @include i23();
   }
 }
 .service {
@@ -33,10 +33,7 @@
     &:last-child {
       height: 7.5rem;
     }
-    i {
-      font-size: 2.3rem;
-      line-height: 2.3rem;
-    }
+    @include i23();
   }
   .line {
     margin: 0 auto;
@@ -50,10 +47,7 @@
   top: 5.2rem;
   .item {
     padding: 1.6rem 0.4rem;
-    i {
-      font-size: 2.3rem;
-      line-height: 2.3rem;
-    }
+    @include i23();
   }
 }
 .report {
@@ -61,10 +55,7 @@
   top: 8.8rem;
   .item {
     padding: 1.6rem 0.4rem;
-    i {
-      font-size: 2.3rem;
-      line-height: 2.3rem;
-    }
+    @include i23();
   }
 }
 .listRole {
@@ -83,10 +74,7 @@
   top: 14rem;
   .item {
     padding: 1.6rem 0.4rem;
-    i {
-      font-size: 2.3rem;
-      line-height: 2.3rem;
-    }
+    @include i23();
   }
 }
 .add {
