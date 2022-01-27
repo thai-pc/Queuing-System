@@ -78,6 +78,17 @@
     }
   }
 }
+.listAccount {
+  height: 9.4rem;
+  top: 14rem;
+  .item {
+    padding: 1.6rem 0.4rem;
+    i {
+      font-size: 2.3rem;
+      line-height: 2.3rem;
+    }
+  }
+}
 .add {
   width: 8rem;
   box-shadow: 0px 0px 6px #e7e9f2;

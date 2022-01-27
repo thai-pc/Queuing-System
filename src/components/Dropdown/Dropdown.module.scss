@@ -4,6 +4,18 @@
   line-height: 4.4rem;
   font-size: 1.4rem;
 }
+@mixin deviceAccount {
+  width: 30rem;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  ul {
+    width: 30rem;
+    top: 4.3rem;
+    li {
+      @include li();
+    }
+  }
+}
 .chart {
   width: 10.6rem;
   height: 100%;
@@ -17,18 +29,11 @@
     }
   }
 }
+.account {
+  @include deviceAccount();
+}
 .device {
-  width: 30rem;
-  height: 4.4rem;
-  line-height: 4.4rem;
-  ul {
-    width: 30rem;
-    height: 15.2rem;
-    top: 4.3rem;
-    li {
-      @include li();
-    }
-  }
+  @include deviceAccount();
 }
 .addDevice {
   width: 54rem;

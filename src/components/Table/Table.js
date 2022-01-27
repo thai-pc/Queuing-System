@@ -14,6 +14,7 @@ function Table({
   report,
   listRole,
   diary,
+  listAccount,
 }) {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,6 +59,7 @@ function Table({
           [styles.report]: report,
           [styles.listRole]: listRole,
           [styles.diary]: diary,
+          [styles.listAccount]: listAccount,
         })}
       >
         <div className={styles.container}>
@@ -76,6 +78,8 @@ function Table({
               <Title titleListRole />
             ) : diary ? (
               <Title titleDiary />
+            ) : listAccount ? (
+              <Title titleListAccount />
             ) : null}
           </div>
           <div className={styles.body}>
@@ -93,6 +97,8 @@ function Table({
               <Items currentItemListRole={currentItem} />
             ) : diary ? (
               <Items currentItemDiary={currentItem} />
+            ) : listAccount ? (
+              <Items currentItemListAccount={currentItem} />
             ) : null}
           </div>
         </div>

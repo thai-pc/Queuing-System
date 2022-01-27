@@ -119,3 +119,17 @@ export const listNumberServiceAdd = [
     label: 'Khám hô hấp',
   },
 ];
+export const account = [
+  {
+    label: 'Tất cả',
+  },
+  {
+    label: 'Kế toán',
+  },
+  {
+    label: 'Quản lý',
+  },
+  {
+    label: 'Admin',
+  },
+];

@@ -20,7 +20,9 @@ function Report() {
         </div>
         <div className="box">
           <div className={styles.box}>
-            <DateTimePicker listNumber />
+            <div className="d-flex">
+              <DateTimePicker listNumber />
+            </div>
             <div className={styles.table}>
               <Table
                 link="https://jsonblob.com/api/jsonBlob/933590690357854208"

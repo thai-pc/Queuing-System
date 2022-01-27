@@ -12,6 +12,7 @@ function Items({
   currentItemReport,
   currentItemListRole,
   currentItemDiary,
+  currentItemListAccount,
 }) {
   let navigate = useNavigate();
   const handeDetail = (e) => {
@@ -33,6 +34,8 @@ function Items({
       ? '/service/list/update'
       : currentItemListRole
       ? '/systems/role/update'
+      : currentItemListAccount
+      ? '/systems/account/update'
       : null;
     navigate(path);
   };
@@ -208,6 +211,33 @@ function Items({
                 <div className={styles.col}>{item.time}</div>
                 <div className={styles.col}>{item.ip}</div>
                 <div className={styles.col}>{item.operation}</div>
+              </div>
+            );
+          })
+        : null}
+      {currentItemListAccount
+        ? currentItemListAccount.map((item, index) => {
+            return (
+              <div className={styles.rows} key={index}>
+                <div className={styles.col}>{item.user}</div>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.phone}</div>
+                <div className={styles.col}>{item.email}</div>
+                <div className={styles.col}>{item.role}</div>
+                <div
+                  className={clsx(styles.col, {
+                    [styles.red]: item.active === 'Ngưng hoạt động',
+                    [styles.green]: item.active === 'Hoạt động',
+                  })}
+                >
+                  <FiberManualRecordIcon />
+                  {item.active}
+                </div>
+                <div className={styles.col}>
+                  <span className={styles.update} onClick={handeUpdate}>
+                    Cập nhật
+                  </span>
+                </div>
               </div>
             );
           })

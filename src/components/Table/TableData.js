@@ -63,3 +63,14 @@ export const diary = [
     operation: 'Thao tác thực hiện',
   },
 ];
+
+export const listAccount = [
+  {
+    user: 'Tên đăng nhập',
+    name: 'Họ tên',
+    phone: 'Số điện thoại',
+    email: 'Email',
+    role: 'Vai trò',
+    active: 'Trạng thái hoạt động',
+  },
+];

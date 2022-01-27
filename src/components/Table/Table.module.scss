@@ -1,3 +1,8 @@
+@mixin page {
+  .page {
+    margin-top: 2.4rem;
+  }
+}
 .rows {
   display: flex;
   .col {
@@ -14,9 +19,7 @@
 .listDevice {
   width: 111.2rem;
   height: 49rem;
-  .page {
-    margin-top: 2.4rem;
-  }
+  @include page();
   .col {
     padding-left: 0.8rem;
     &:nth-child(1) {
@@ -63,9 +66,7 @@
 .listService {
   width: 111.2rem;
   height: 49rem;
-  .page {
-    margin-top: 2.4rem;
-  }
+  @include page();
   .col {
     padding-left: 1.7rem;
     &:nth-child(1) {
@@ -105,9 +106,7 @@
   }
 }
 .listNumber {
-  .page {
-    margin-top: 2.4rem;
-  }
+  @include page();
   .col {
     padding-left: 1.7rem;
     &:nth-child(1) {
@@ -138,9 +137,7 @@
   }
 }
 .report {
-  .page {
-    margin-top: 2.4rem;
-  }
+  @include page();
   .col {
     padding-left: 1.6rem;
     position: relative;
@@ -187,9 +184,7 @@
   }
 }
 .diary {
-  .page {
-    margin-top: 2.4rem;
-  }
+  @include page();
   .col {
     padding-left: 1.6rem;
     &:nth-child(1) {
@@ -203,6 +198,33 @@
     }
     &:nth-child(4) {
       width: 38.6rem;
+    }
+  }
+}
+.listAccount {
+  @include page();
+  .col {
+    padding-left: 1.7rem;
+    &:nth-child(1) {
+      width: 15rem;
+    }
+    &:nth-child(2) {
+      width: 16.6rem;
+    }
+    &:nth-child(3) {
+      width: 13rem;
+    }
+    &:nth-child(4) {
+      width: 25.5rem;
+    }
+    &:nth-child(5) {
+      width: 11.4rem;
+    }
+    &:nth-child(6) {
+      width: 19.3rem;
+    }
+    &:nth-child(7) {
+      width: 9.9rem;
     }
   }
 }

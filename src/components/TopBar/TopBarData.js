@@ -233,6 +233,7 @@ export const Account = [
     ],
   },
 ];
+
 export const diary = [
   {
     title: 'Cài đặt hệ thống',
@@ -241,5 +242,46 @@ export const diary = [
   {
     title: 'Nhật ký hoạt động',
     path: '/systems/diary/list',
+  },
+];
+
+export const listAccount = [
+  {
+    title: 'Cài đặt hệ thống',
+    path: '',
+  },
+  {
+    title: 'Quản lý tài khoản',
+    path: '/systems/account/list',
+  },
+];
+
+export const addAccount = [
+  {
+    title: 'Cài đặt hệ thống',
+    path: '',
+  },
+  {
+    title: 'Quản lý tài khoản',
+    path: '/systems/account/list',
+  },
+  {
+    title: 'Thêm tài khoản',
+    path: '/systems/account/add',
+  },
+];
+
+export const updateAccount = [
+  {
+    title: 'Cài đặt hệ thống',
+    path: '',
+  },
+  {
+    title: 'Quản lý tài khoản',
+    path: '/systems/account/list',
+  },
+  {
+    title: 'Cập nhật tài khoản',
+    path: '/systems/account/update',
   },
 ];

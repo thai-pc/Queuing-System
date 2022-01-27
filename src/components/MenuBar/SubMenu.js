@@ -8,15 +8,22 @@ function SubMenu({ item }) {
   const [showSub, setShowsub] = useState(false);
 
   const pathName = window.location.pathname;
+
+  const system =
+    pathName === item.pathListRole ||
+    pathName === item.pathAddRole ||
+    pathName === item.pathUpdateRole ||
+    pathName === item.pathListAccount ||
+    pathName === item.pathAddAccount ||
+    pathName === item.pathUpdateAccount ||
+    pathName === item.pathDiary;
+
   const active =
     pathName === item.path ||
     pathName === item.pathUpdate ||
     pathName === item.pathAdd ||
     pathName === item.pathDetail ||
-    pathName === item.pathListRole ||
-    pathName === item.pathAddRole ||
-    pathName === item.pathUpdateRole ||
-    pathName === item.pathDiary
+    system
       ? clsx(styles.items, styles.active)
       : styles.items;
 
@@ -27,7 +34,9 @@ function SubMenu({ item }) {
           {item.icon}
           {item.title}
           {item.openIcon ? (
-            <span onClick={() => setShowsub(!false)}>{item.openIcon}</span>
+            <div className={styles.systems} onClick={() => setShowsub(!false)}>
+              {item.openIcon}
+            </div>
           ) : null}
         </Link>
         {showSub && <SubSystems />}

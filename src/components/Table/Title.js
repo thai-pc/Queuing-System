@@ -8,6 +8,7 @@ import {
   listReport,
   listRole,
   diary,
+  listAccount,
 } from '../Table/TableData';
 import {
   idReport,
@@ -26,6 +27,7 @@ function Title({
   titleReport,
   titleListRole,
   titleDiary,
+  titleListAccount,
 }) {
   const [isId, setIsID] = useState(false);
   const [isService, setService] = useState(false);
@@ -170,6 +172,21 @@ function Title({
                 <div className={styles.col}>{item.time}</div>
                 <div className={styles.col}>{item.ip}</div>
                 <div className={styles.col}>{item.operation}</div>
+              </div>
+            );
+          })
+        : null}
+      {titleListAccount
+        ? listAccount.map((item, index) => {
+            return (
+              <div key={index} className={styles.rows}>
+                <div className={styles.col}>{item.user}</div>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.phone}</div>
+                <div className={styles.col}>{item.email}</div>
+                <div className={styles.col}>{item.role}</div>
+                <div className={styles.col}>{item.active}</div>
+                <div className={styles.col}></div>
               </div>
             );
           })
