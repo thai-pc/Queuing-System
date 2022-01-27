@@ -133,3 +133,14 @@ export const account = [
     label: 'Admin',
   },
 ];
+export const role = [
+  {
+    label: 'Kế toán',
+  },
+  {
+    label: 'Quản lý',
+  },
+  {
+    label: 'Admin',
+  },
+];

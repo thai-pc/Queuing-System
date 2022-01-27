@@ -35,6 +35,18 @@
 .device {
   @include deviceAccount();
 }
+.AddUpdateAccount {
+  width: 56rem;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  ul {
+    width: 56rem;
+    top: 4.3rem;
+    li {
+      @include li();
+    }
+  }
+}
 .addDevice {
   width: 54rem;
   height: 4.4rem;

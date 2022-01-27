@@ -1,3 +1,22 @@
+@mixin item {
+  .item {
+    margin-bottom: 1.6rem;
+  }
+  .boxDrop {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #282739;
+      line-height: 2.4rem;
+      margin-bottom: 0.8rem;
+      span {
+        color: var(--red);
+      }
+    }
+  }
+}
 .AddUpdateAccount {
   margin-top: 0.8rem;
   .container {
@@ -15,24 +34,11 @@
         .left {
           width: 50%;
           margin-right: 2.4rem;
-          .item {
-            margin-bottom: 1.6rem;
-          }
+          @include item();
         }
         .right {
           width: 50%;
-          label {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #282739;
-            line-height: 2.4rem;
-            span {
-              color: var(--red);
-            }
-          }
-          .item {
-            margin-bottom: 1.6rem;
-          }
+          @include item();
         }
       }
     }

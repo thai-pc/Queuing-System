@@ -15,6 +15,7 @@ function Dropdown({
   listNumber,
   addNumber,
   account,
+  AddUpdateAccount,
 }) {
   return (
     <>
@@ -48,7 +49,8 @@ function Dropdown({
       detailService ||
       listNumber ||
       addNumber ||
-      account ? (
+      account ||
+      AddUpdateAccount ? (
         <div
           className={clsx(styles.dropdown, {
             [styles.border]: showdrop,
@@ -58,6 +60,7 @@ function Dropdown({
             [styles.listNumber]: listNumber,
             [styles.addNumber]: addNumber,
             [styles.account]: account,
+            [styles.AddUpdateAccount]: AddUpdateAccount,
           })}
           onClick={handleShow}
         >
