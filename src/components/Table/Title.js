@@ -7,6 +7,7 @@ import {
   listNumber,
   listReport,
   listRole,
+  diary,
 } from '../Table/TableData';
 import {
   idReport,
@@ -24,6 +25,7 @@ function Title({
   titleListNumber,
   titleReport,
   titleListRole,
+  titleDiary,
 }) {
   const [isId, setIsID] = useState(false);
   const [isService, setService] = useState(false);
@@ -156,6 +158,18 @@ function Title({
                 <div className={styles.col}>{item.user}</div>
                 <div className={styles.col}>{item.description}</div>
                 <div className={styles.col}></div>
+              </div>
+            );
+          })
+        : null}
+      {titleDiary
+        ? diary.map((item, index) => {
+            return (
+              <div key={index} className={styles.rows}>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.time}</div>
+                <div className={styles.col}>{item.ip}</div>
+                <div className={styles.col}>{item.operation}</div>
               </div>
             );
           })

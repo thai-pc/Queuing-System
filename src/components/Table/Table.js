@@ -13,10 +13,11 @@ function Table({
   listNumber,
   report,
   listRole,
+  diary,
 }) {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const limit = detailService ? 8 : report ? 10 : listRole ? 6 : 9;
+  const limit = detailService ? 8 : report || diary ? 10 : listRole ? 6 : 9;
 
   //Tính số trang
   const pages = [];
@@ -56,6 +57,7 @@ function Table({
           [styles.listNumber]: listNumber,
           [styles.report]: report,
           [styles.listRole]: listRole,
+          [styles.diary]: diary,
         })}
       >
         <div className={styles.container}>
@@ -72,6 +74,8 @@ function Table({
               <Title titleReport />
             ) : listRole ? (
               <Title titleListRole />
+            ) : diary ? (
+              <Title titleDiary />
             ) : null}
           </div>
           <div className={styles.body}>
@@ -87,6 +91,8 @@ function Table({
               <Items currentItemReport={currentItem} />
             ) : listRole ? (
               <Items currentItemListRole={currentItem} />
+            ) : diary ? (
+              <Items currentItemDiary={currentItem} />
             ) : null}
           </div>
         </div>

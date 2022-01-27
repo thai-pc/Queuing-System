@@ -233,10 +233,13 @@ export const Account = [
     ],
   },
 ];
-export const Diary = [
+export const diary = [
   {
     title: 'Cài đặt hệ thống',
-    path: '/systems/diary',
-    titleSub: 'Nhật ký người dùng',
+    path: '',
+  },
+  {
+    title: 'Nhật ký hoạt động',
+    path: '/systems/diary/list',
   },
 ];

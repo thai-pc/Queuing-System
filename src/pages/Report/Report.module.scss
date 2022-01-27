@@ -1,7 +1,27 @@
 .box {
   margin-top: 2.4rem;
   position: relative;
+  .main {
+    display: flex;
+    justify-content: space-between;
+    width: 111.2rem;
+  }
   .table {
     margin-top: 1.6rem;
+  }
+}
+.keyboard {
+  .search {
+    position: relative;
+    .btn {
+      position: absolute;
+      right: 1.2rem;
+      color: var(--orange);
+      font-size: 1.6rem;
+      z-index: 7;
+      bottom: 1.2rem;
+      background: transparent;
+      cursor: pointer;
+    }
   }
 }

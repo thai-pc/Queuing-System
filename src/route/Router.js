@@ -20,6 +20,7 @@ import DetailNumber from '../pages/NumberLevel/DetailNumber';
 import Role from '../pages/Systems/Role';
 import AddRole from '../pages/Systems/AddRole';
 import UpdateRole from '../pages/Systems/UpdateRole';
+import Diary from '../pages/Systems/Diary';
 
 function Router() {
   return (
@@ -48,6 +49,7 @@ function Router() {
         <Route path="/systems/role/list" element={<Role />}></Route>
         <Route path="/systems/role/add" element={<AddRole />}></Route>
         <Route path="/systems/role/update" element={<UpdateRole />}></Route>
+        <Route path="/systems/diary/list" element={<Diary />}></Route>
       </Routes>
     </BrowserRouter>
   );

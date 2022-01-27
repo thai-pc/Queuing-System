@@ -11,6 +11,7 @@ function Items({
   currentItemListNumber,
   currentItemReport,
   currentItemListRole,
+  currentItemDiary,
 }) {
   let navigate = useNavigate();
   const handeDetail = (e) => {
@@ -195,6 +196,18 @@ function Items({
                     Cập nhật
                   </span>
                 </div>
+              </div>
+            );
+          })
+        : null}
+      {currentItemDiary
+        ? currentItemDiary.map((item, index) => {
+            return (
+              <div className={styles.rows} key={index}>
+                <div className={styles.col}>{item.name}</div>
+                <div className={styles.col}>{item.time}</div>
+                <div className={styles.col}>{item.ip}</div>
+                <div className={styles.col}>{item.operation}</div>
               </div>
             );
           })

@@ -48,5 +48,6 @@ export const MenuBarData = [
     pathListRole: '/systems/role/list',
     pathAddRole: '/systems/role/add',
     pathUpdateRole: '/systems/role/update',
+    pathDiary: '/systems/diary/list',
   },
 ];

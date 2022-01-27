@@ -54,3 +54,12 @@ export const listRole = [
     description: 'Mô tả',
   },
 ];
+
+export const diary = [
+  {
+    name: 'Tên đăng nhập',
+    time: 'Thời gian tác động',
+    ip: 'IP thực hiện',
+    operation: 'Thao tác thực hiện',
+  },
+];

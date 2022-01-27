@@ -15,7 +15,8 @@ function SubMenu({ item }) {
     pathName === item.pathDetail ||
     pathName === item.pathListRole ||
     pathName === item.pathAddRole ||
-    pathName === item.pathUpdateRole
+    pathName === item.pathUpdateRole ||
+    pathName === item.pathDiary
       ? clsx(styles.items, styles.active)
       : styles.items;
 
