@@ -8,6 +8,16 @@ import styles from './MainAddUpdateAccount.module.scss';
 import clsx from 'clsx';
 
 function MainAddUpdateAccount({ addAccount, updateAccount }) {
+  const [showPassword, setShowPassword] = useState(addAccount ? false : true);
+
+  const handlePassword = () => {
+    setShowPassword(!showPassword);
+  };
+  const [showConfirm, setShowConfirm] = useState(addAccount ? false : true);
+
+  const handleConfirm = () => {
+    setShowConfirm(!showConfirm);
+  };
   const AddUpdateAccountLeft = [
     {
       label: 'Họ tên',
@@ -48,19 +58,23 @@ function MainAddUpdateAccount({ addAccount, updateAccount }) {
       label: 'Mật khẩu',
       icon: <span> *</span>,
       name: 'password',
-      type: 'password',
-      value: addAccount ? '********' : updateAccount ? 'Tuyetnguyen12' : null,
+      type: showPassword ? 'text' : 'password',
+      placeholder: addAccount ? '********' : null,
+      value: updateAccount ? 'Tuyetnguyen12' : '',
     },
     {
       label: 'Nhập lại mật khẩu',
       icon: <span> *</span>,
       name: 'confirm',
-      type: 'password',
-      value: addAccount ? '********' : updateAccount ? 'Tuyetnguyen12' : null,
+      type: showConfirm ? 'text' : 'password',
+      placeholder: addAccount ? '********' : null,
+      value: updateAccount ? 'Tuyetnguyen12' : '',
     },
   ];
 
-  const [typeDevice, setTypeDevice] = useState(listDeviceActie[1].label);
+  const [typeDevice, setTypeDevice] = useState(
+    addAccount ? listDeviceActie[1].label : listDeviceActie[2].label
+  );
   const [showType, setShowType] = useState(false);
 
   const handleShowType = () => {
@@ -72,7 +86,7 @@ function MainAddUpdateAccount({ addAccount, updateAccount }) {
   };
 
   const [roles, setRole] = useState(
-    addAccount ? 'Chọn vai trò' : role[2].label
+    addAccount ? 'Chọn vai trò' : role[0].label
   );
   const [showRole, setShowRole] = useState(false);
 
@@ -88,6 +102,7 @@ function MainAddUpdateAccount({ addAccount, updateAccount }) {
     e.preventDefault();
     navigate('/systems/account/list');
   };
+
   return (
     <div className={styles.AddUpdateAccount}>
       <h3 className="title">Quản lý tài khoản</h3>
@@ -122,6 +137,22 @@ function MainAddUpdateAccount({ addAccount, updateAccount }) {
                 return (
                   <div key={input.name} className={styles.item}>
                     <Input value={input.value} {...input} AddUpdateRole />
+                    {input.name === 'password' || input.name === 'confirm' ? (
+                      <span
+                        className={styles.boxEye}
+                        onClick={
+                          input.name === 'password'
+                            ? handlePassword
+                            : handleConfirm
+                        }
+                      >
+                        <i
+                          className={
+                            showPassword ? 'fal fa-eye' : 'fal fa-eye-slash'
+                          }
+                        ></i>
+                      </span>
+                    ) : null}
                   </div>
                 );
               })}

@@ -42,7 +42,7 @@ export const MenuBarData = [
   },
   {
     title: 'Cài đặt hệ thống',
-    path: '/systems',
+    path: '',
     icon: <SettingsOutlinedIcon />,
     openIcon: <MoreVertOutlinedIcon />,
     pathListRole: '/systems/role/list',

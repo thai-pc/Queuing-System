@@ -7,7 +7,6 @@ import ForgetPass from '../pages/ForgetPass/ForgetPass';
 import Service from '../pages/Service/Service';
 import Report from '../pages/Report/Report';
 import Device from '../pages/Device/Device';
-import Systems from '../pages/Systems/Systems';
 import AddDevice from '../pages/Device/AddDevice';
 import UpdateDevice from '../pages/Device/UpdateDevice';
 import DetailDevice from '../pages/Device/DetailDevice';
@@ -48,7 +47,6 @@ function Router() {
           element={<DetailNumber />}
         ></Route>
         <Route path="/report/list" element={<Report />}></Route>
-        <Route path="/systems" element={<Systems />}></Route>
         <Route path="/systems/role/list" element={<Role />}></Route>
         <Route path="/systems/role/add" element={<AddRole />}></Route>
         <Route path="/systems/role/update" element={<UpdateRole />}></Route>

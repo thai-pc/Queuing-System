@@ -29,15 +29,14 @@ function SubMenu({ item }) {
 
   return (
     <>
-      <li className={active}>
+      <li
+        className={active}
+        onClick={() => (item.openIcon ? setShowsub(!false) : null)}
+      >
         <Link to={item.path} className={styles.link}>
           {item.icon}
           {item.title}
-          {item.openIcon ? (
-            <div className={styles.systems} onClick={() => setShowsub(!false)}>
-              {item.openIcon}
-            </div>
-          ) : null}
+          {item.openIcon}
         </Link>
         {showSub && <SubSystems />}
       </li>

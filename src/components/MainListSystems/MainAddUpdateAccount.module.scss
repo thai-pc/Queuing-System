@@ -1,6 +1,14 @@
 @mixin item {
   .item {
     margin-bottom: 1.6rem;
+    position: relative;
+    .boxEye {
+      font-size: 1.7rem;
+      color: #000000;
+      position: absolute;
+      right: 1.4rem;
+      bottom: 1rem;
+    }
   }
   .boxDrop {
     display: flex;
